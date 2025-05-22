@@ -1,0 +1,2814 @@
+{
+  "requesterUsername": "Copilotaiadmin1",
+  "requesterAvatarIconUri": {
+    "$mid": 1,
+    "path": "/u/171037490",
+    "scheme": "https",
+    "authority": "avatars.githubusercontent.com",
+    "query": "v=4"
+  },
+  "responderUsername": "GitHub Copilot",
+  "responderAvatarIconUri": {
+    "id": "copilot"
+  },
+  "initialLocation": "panel",
+  "requests": [
+    {
+      "requestId": "request_7cbe42d6-e593-4c87-8475-70d199d7367b",
+      "message": {
+        "text": "currently the ribbon menu is on page top move it to the left side.",
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 66
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 67
+            },
+            "text": "currently the ribbon menu is on page top move it to the left side.",
+            "kind": "text"
+          }
+        ]
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:approot.component.html",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\approot\\approot.component.html",
+                "_sep": 1,
+                "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/approot/approot.component.html",
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/approot/approot.component.html",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 35,
+                "endColumn": 1
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "To move the `<app-ribbonmenu>` from the top to the left side, you need to:\n\n1. Update the HTML structure to create a sidebar layout.\n2. Adjust CSS to make the sidebar vertical and content area fill the rest.\n\nHere's a suggested change for your ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\approot\\approot.component.html",
+            "_sep": 1,
+            "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/approot/approot.component.html",
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/approot/approot.component.html",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": ":\n\n````html\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\approot\\approot.component.html",
+            "_sep": 1,
+            "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/approot/approot.component.html",
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/approot/approot.component.html",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "<!-- Copyright © 2018 - 2019 VEST, Inc. All rights reserved. -->\n\n<div id=\"CompleteHomePage\" [ngClass]=\"{ 'LogeddInView': isLoggedIn }\" style=\"display: flex; height: 100vh;\">\n\t<!-- Sidebar -->\n\t<div *ngIf=\"isSupportedBrowser\" style=\"min-width: 220px; background: #f5f5f5; height: 100vh;\">\n\t\t<app-ribbonmenu></app-ribbonmenu>\n\t</div>\n\t<!-- Main Content -->\n\t<div style=\"flex: 1; display: flex; flex-direction: column;\">\n\t\t<perfect-scrollbar [style.maxHeight]=\"'calc(100vh - 50px)'\" [style.maxWidth]=\"'100%'\" *ngIf=\"isLoggedIn\">\n\t\t\t<div id=\"HeaderAndContent\" style=\"width:100%\">\n\t\t\t\t<perfect-scrollbar [style.maxHeight]=\"'calc(100vh - 110px)'\" [style.maxWidth]=\"'100%'\">\n\t\t\t\t\t<div id=\"Content\" ngClass=\"ViewerContent\">\n\t\t\t\t\t\t<router-outlet></router-outlet>\n\t\t\t\t\t</div>\n\t\t\t\t</perfect-scrollbar>\n\t\t\t</div>\n\t\t</perfect-scrollbar>\n\t\t<perfect-scrollbar class=\"scroll-container\" [scrollIndicators]=\"true\" *ngIf=\"!isLoggedIn\">\n\t\t\t<div>\n\t\t\t\t<div id=\"CompleteHomePage\" [style.maxHeight]=\"'calc(100vh - 110px)'\" [style.maxWidth]=\"'100%'\">\n\t\t\t\t\t<router-outlet></router-outlet>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</perfect-scrollbar>\n\t\t<app-cookie-message (cookieConsentAcceptedFlag)='updateShowCookieBanner($event)' *ngIf=\"showCookieBanner\"></app-cookie-message>\n\t\t<footer id=\"footer\" [showFooterLinks]=\"showFooterLinks\" *ngIf=\"isSupportedBrowser\"></footer>\n\t\t<span id=\"ServiceStatus\">Ready</span>\n\t</div>\n</div>\n````\n\n**Notes:**\n- The sidebar is always visible if `isSupportedBrowser` is true.\n- The main content area is flexible and scrollable.\n- You may want to move the sidebar logic into a CSS class for maintainability.\n- Adjust the sidebar width and background as needed.\n\nYou may also need to update your CSS to further style the sidebar and content area. Let me know if you want the CSS as well!",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_6c43387f-55f5-42dc-9e14-5439f086f1be",
+      "result": {
+        "timings": {
+          "firstProgress": 1095,
+          "totalElapsed": 17156
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "<!-- Copyright © 2018 - 2019 VEST, Inc. All rights reserved. -->\n\n<div id=\"CompleteHomePage\" [ngClass]=\"{ 'LogeddInView': isLoggedIn }\" style=\"display: flex; height: 100vh;\">\n\t<!-- Sidebar -->\n\t<div *ngIf=\"isSupportedBrowser\" style=\"min-width: 220px; background: #f5f5f5; height: 100vh;\">\n\t\t<app-ribbonmenu></app-ribbonmenu>\n\t</div>\n\t<!-- Main Content -->\n\t<div style=\"flex: 1; display: flex; flex-direction: column;\">\n\t\t<perfect-scrollbar [style.maxHeight]=\"'calc(100vh - 50px)'\" [style.maxWidth]=\"'100%'\" *ngIf=\"isLoggedIn\">\n\t\t\t<div id=\"HeaderAndContent\" style=\"width:100%\">\n\t\t\t\t<perfect-scrollbar [style.maxHeight]=\"'calc(100vh - 110px)'\" [style.maxWidth]=\"'100%'\">\n\t\t\t\t\t<div id=\"Content\" ngClass=\"ViewerContent\">\n\t\t\t\t\t\t<router-outlet></router-outlet>\n\t\t\t\t\t</div>\n\t\t\t\t</perfect-scrollbar>\n\t\t\t</div>\n\t\t</perfect-scrollbar>\n\t\t<perfect-scrollbar class=\"scroll-container\" [scrollIndicators]=\"true\" *ngIf=\"!isLoggedIn\">\n\t\t\t<div>\n\t\t\t\t<div id=\"CompleteHomePage\" [style.maxHeight]=\"'calc(100vh - 110px)'\" [style.maxWidth]=\"'100%'\">\n\t\t\t\t\t<router-outlet></router-outlet>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</perfect-scrollbar>\n\t\t<app-cookie-message (cookieConsentAcceptedFlag)='updateShowCookieBanner($event)' *ngIf=\"showCookieBanner\"></app-cookie-message>\n\t\t<footer id=\"footer\" [showFooterLinks]=\"showFooterLinks\" *ngIf=\"isSupportedBrowser\"></footer>\n\t\t<span id=\"ServiceStatus\">Ready</span>\n\t</div>\n</div>\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/approot/approot.component.html",
+                "scheme": "file"
+              },
+              "language": "html",
+              "markdownBeforeBlock": "To move the `<app-ribbonmenu>` from the top to the left side, you need to:\n\n1. Update the HTML structure to create a sidebar layout.\n2. Adjust CSS to make the sidebar vertical and content area fill the rest.\n\nHere's a suggested change for your :\n\n"
+            }
+          ],
+          "modelMessageId": "93fbb1bd-d6a0-4cd4-b9bd-48ee6ac2989a",
+          "responseId": "aea0201e-0100-464b-8ec1-68091df23523",
+          "sessionId": "2804d435-3e5d-4c3b-bf75-6976ca64c068",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "Copilotaiadmin1",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/171037490",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "uri": {
+              "$mid": 1,
+              "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\approot\\approot.component.html",
+              "_sep": 1,
+              "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/approot/approot.component.html",
+              "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/approot/approot.component.html",
+              "scheme": "file"
+            },
+            "range": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 35,
+              "endColumn": 1
+            }
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1747823586985
+    },
+    {
+      "requestId": "request_2cb0b656-a46e-4c78-aa2f-fbc2e16f769b",
+      "message": {
+        "text": "style this component to view as a left menu",
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 43
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 44
+            },
+            "text": "style this component to view as a left menu",
+            "kind": "text"
+          }
+        ]
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:ribbonmenu.component.html",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\ribbonmenu\\ribbonmenu.component.html",
+                "_sep": 1,
+                "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/ribbonmenu/ribbonmenu.component.html",
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/ribbonmenu/ribbonmenu.component.html",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 13,
+                "startColumn": 1,
+                "endLineNumber": 51,
+                "endColumn": 20
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "To style your ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\ribbonmenu\\ribbonmenu.component.html",
+            "_sep": 1,
+            "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/ribbonmenu/ribbonmenu.component.html",
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/ribbonmenu/ribbonmenu.component.html",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": " as a left vertical menu, you need to:\n\n1. Change the layout from horizontal to vertical.\n2. Adjust the nav and ul/li styles for a sidebar look.\n3. Optionally, add a background and set the height to 100vh.\n\nAdd the following CSS to your `ribbonmenu.component.css` (or in a global stylesheet if you prefer):\n\n````css\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\ribbonmenu\\ribbonmenu.component.css",
+            "_sep": 1,
+            "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/ribbonmenu/ribbonmenu.component.css",
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/ribbonmenu/ribbonmenu.component.css",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "/* Sidebar container */\n.RibbonMenu {\n  width: 220px;\n  min-width: 220px;\n  height: 100vh;\n  background: #f5f5f5;\n  display: flex;\n  flex-direction: column;\n  border-right: 1px solid #ddd;\n  padding-top: 10px;\n  box-sizing: border-box;\n}\n\n/* Vertical nav */\n#RibbonNavBar {\n  flex-direction: column;\n  align-items: stretch;\n  height: 100%;\n  padding: 0;\n  background: transparent;\n  border: none;\n}\n\n/* Logo at the top */\n.navbar-brand.setwidth {\n  margin-bottom: 30px;\n  display: flex;\n  justify-content: center;\n}\n\n/* Vertical menu list */\nul.nav {\n  flex-direction: column !important;\n  width: 100%;\n  padding-left: 0;\n}\n\nul.nav li {\n  width: 100%;\n  margin: 0;\n  border-radius: 0;\n  margin-bottom: 5px;\n}\n\nul.nav li a.nav-link {\n  display: flex;\n  align-items: center;\n  padding: 12px 20px;\n  color: #333;\n  border-radius: 4px;\n  transition: background 0.2s;\n}\n\nul.nav li.active-route a.nav-link,\nul.nav li a.nav-link:hover {\n  background: #007bff;\n  color: #fff;\n}\n\n.nav-icons {\n  margin-right: 10px;\n  width: 24px;\n  height: 24px;\n}\n\n/* Facepile menu at the bottom */\n.navbar-nav.navbar-right.setwidth {\n  margin-top: auto;\n  flex-direction: column;\n  align-items: center;\n}\n\n#LoggedInUser {\n  margin-bottom: 20px;\n  border-radius: 50%;\n  width: 40px;\n  height: 40px;\n  line-height: 40px;\n  color: #fff;\n  font-weight: bold;\n  font-size: 18px;\n  text-align: center;\n  cursor: pointer;\n  background: #007bff;\n}\n\n#LoggedUserDropdown {\n  min-width: 160px;\n}\n\n/* Hide horizontal nav bar border/shadow */\n#RibbonNavBar {\n  box-shadow: none;\n  border: none;\n}\n````\n\n**What this does:**\n- Makes the menu vertical, fixed width, and full height.\n- Puts the logo at the top, menu items in the middle, and user info at the bottom.\n- Styles active and hovered menu items.\n- Adjusts icon and user avatar appearance.\n\n**No HTML changes are needed** unless you want to further customize the structure.  \nLet me know if you want a more compact or expanded look!",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_6000acc0-04aa-43b0-b512-e295a50d5001",
+      "result": {
+        "timings": {
+          "firstProgress": 1117,
+          "totalElapsed": 21346
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "/* Sidebar container */\n.RibbonMenu {\n  width: 220px;\n  min-width: 220px;\n  height: 100vh;\n  background: #f5f5f5;\n  display: flex;\n  flex-direction: column;\n  border-right: 1px solid #ddd;\n  padding-top: 10px;\n  box-sizing: border-box;\n}\n\n/* Vertical nav */\n#RibbonNavBar {\n  flex-direction: column;\n  align-items: stretch;\n  height: 100%;\n  padding: 0;\n  background: transparent;\n  border: none;\n}\n\n/* Logo at the top */\n.navbar-brand.setwidth {\n  margin-bottom: 30px;\n  display: flex;\n  justify-content: center;\n}\n\n/* Vertical menu list */\nul.nav {\n  flex-direction: column !important;\n  width: 100%;\n  padding-left: 0;\n}\n\nul.nav li {\n  width: 100%;\n  margin: 0;\n  border-radius: 0;\n  margin-bottom: 5px;\n}\n\nul.nav li a.nav-link {\n  display: flex;\n  align-items: center;\n  padding: 12px 20px;\n  color: #333;\n  border-radius: 4px;\n  transition: background 0.2s;\n}\n\nul.nav li.active-route a.nav-link,\nul.nav li a.nav-link:hover {\n  background: #007bff;\n  color: #fff;\n}\n\n.nav-icons {\n  margin-right: 10px;\n  width: 24px;\n  height: 24px;\n}\n\n/* Facepile menu at the bottom */\n.navbar-nav.navbar-right.setwidth {\n  margin-top: auto;\n  flex-direction: column;\n  align-items: center;\n}\n\n#LoggedInUser {\n  margin-bottom: 20px;\n  border-radius: 50%;\n  width: 40px;\n  height: 40px;\n  line-height: 40px;\n  color: #fff;\n  font-weight: bold;\n  font-size: 18px;\n  text-align: center;\n  cursor: pointer;\n  background: #007bff;\n}\n\n#LoggedUserDropdown {\n  min-width: 160px;\n}\n\n/* Hide horizontal nav bar border/shadow */\n#RibbonNavBar {\n  box-shadow: none;\n  border: none;\n}\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/ribbonmenu/ribbonmenu.component.css",
+                "scheme": "file"
+              },
+              "language": "css",
+              "markdownBeforeBlock": "To style your  as a left vertical menu, you need to:\n\n1. Change the layout from horizontal to vertical.\n2. Adjust the nav and ul/li styles for a sidebar look.\n3. Optionally, add a background and set the height to 100vh.\n\nAdd the following CSS to your `ribbonmenu.component.css` (or in a global stylesheet if you prefer):\n\n"
+            }
+          ],
+          "modelMessageId": "12c2a57a-cdbd-463c-9711-c1434f3418ae",
+          "responseId": "21340d66-b052-46ae-8ec4-5122a805a0d7",
+          "sessionId": "2804d435-3e5d-4c3b-bf75-6976ca64c068",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "Copilotaiadmin1",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/171037490",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\ribbonmenu\\ribbonmenu.component.html",
+            "_sep": 1,
+            "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/ribbonmenu/ribbonmenu.component.html",
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/ribbonmenu/ribbonmenu.component.html",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1747827686560
+    },
+    {
+      "requestId": "request_565c210d-145f-4dca-8289-d49de674a393",
+      "message": {
+        "text": "also make it responsive",
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 23
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 24
+            },
+            "text": "also make it responsive",
+            "kind": "text"
+          }
+        ]
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:ribbonmenu.component.css",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\ribbonmenu\\ribbonmenu.component.css",
+                "_sep": 1,
+                "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/ribbonmenu/ribbonmenu.component.css",
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/ribbonmenu/ribbonmenu.component.css",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 210,
+                "startColumn": 1,
+                "endLineNumber": 248,
+                "endColumn": 1
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "Here’s how to style your RibbonMenu as a vertical left menu and make it responsive.  \nAdd the following at the **end** of your ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\ribbonmenu\\ribbonmenu.component.css",
+            "_sep": 1,
+            "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/ribbonmenu/ribbonmenu.component.css",
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/ribbonmenu/ribbonmenu.component.css",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": ":\n\n````css\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\ribbonmenu\\ribbonmenu.component.css",
+            "_sep": 1,
+            "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/ribbonmenu/ribbonmenu.component.css",
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/ribbonmenu/ribbonmenu.component.css",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "/* --- Vertical Sidebar Styles --- */\n.RibbonMenu {\n  width: 220px;\n  min-width: 220px;\n  height: 100vh;\n  background: #f5f5f5;\n  display: flex;\n  flex-direction: column;\n  border-right: 1px solid #ddd;\n  padding-top: 10px;\n  box-sizing: border-box;\n  position: relative;\n  z-index: 10;\n}\n\n#RibbonNavBar {\n  flex-direction: column;\n  align-items: stretch;\n  height: 100%;\n  padding: 0;\n  background: transparent;\n  border: none;\n  box-shadow: none;\n}\n\n.navbar-brand.setwidth {\n  margin-bottom: 30px;\n  display: flex;\n  justify-content: center;\n}\n\nul.nav {\n  flex-direction: column !important;\n  width: 100%;\n  padding-left: 0;\n}\n\nul.nav li {\n  width: 100%;\n  margin: 0;\n  border-radius: 0;\n  margin-bottom: 5px;\n}\n\nul.nav li a.nav-link {\n  display: flex;\n  align-items: center;\n  padding: 12px 20px;\n  color: #333;\n  border-radius: 4px;\n  transition: background 0.2s, color 0.2s;\n}\n\nul.nav li.active-route a.nav-link,\nul.nav li a.nav-link:hover {\n  background: #1737BC;\n  color: #fff !important;\n}\n\n.nav-icons {\n  margin-right: 10px;\n  width: 24px;\n  height: 24px;\n}\n\n/* Facepile menu at the bottom */\n.navbar-nav.navbar-right.setwidth {\n  margin-top: auto;\n  flex-direction: column;\n  align-items: center;\n}\n\n#LoggedInUser {\n  margin-bottom: 20px;\n  border-radius: 50%;\n  width: 40px;\n  height: 40px;\n  line-height: 40px;\n  color: #fff;\n  font-weight: bold;\n  font-size: 18px;\n  text-align: center;\n  cursor: pointer;\n  background: #1737BC;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n/* --- Responsive Styles --- */\n@media (max-width: 900px) {\n  .RibbonMenu {\n    width: 60px;\n    min-width: 60px;\n    padding-top: 5px;\n  }\n  .navbar-brand.setwidth {\n    margin-bottom: 10px;\n  }\n  #logo {\n    width: 40px;\n    height: 40px;\n    padding-left: 0;\n  }\n  ul.nav li a.nav-link {\n    padding: 10px 8px;\n    font-size: 0;\n    justify-content: center;\n  }\n  ul.nav li a.nav-link .nav-icons {\n    margin-right: 0;\n  }\n  ul.nav li a.nav-link div,\n  ul.nav li a.nav-link span,\n  ul.nav li a.nav-link br {\n    display: none !important;\n  }\n  ul.nav li a.nav-link .nav-icons {\n    display: inline-block !important;\n  }\n  #LoggedInUser {\n    width: 36px;\n    height: 36px;\n    font-size: 14px;\n    margin-bottom: 10px;\n  }\n}\n\n@media (max-width: 600px) {\n  .RibbonMenu {\n    position: fixed;\n    left: 0;\n    top: 0;\n    height: 100vh;\n    z-index: 1000;\n    width: 48px;\n    min-width: 48px;\n    padding-top: 0;\n    border-right: 1px solid #ccc;\n  }\n  #RibbonNavBar {\n    padding: 0;\n  }\n  .navbar-brand.setwidth {\n    margin-bottom: 5px;\n  }\n  #logo {\n    width: 32px;\n    height: 32px;\n  }\n  ul.nav li {\n    margin-bottom: 2px;\n  }\n  #LoggedInUser {\n    width: 32px;\n    height: 32px;\n    font-size: 12px;\n    margin-bottom: 5px;\n  }\n}\n````\n\n**What this does:**\n- Makes the menu vertical and left-aligned on desktop.\n- Collapses to icons-only on tablets and mobile.\n- Keeps the logo and user avatar visible and sized down on small screens.\n- Ensures the sidebar stays fixed and usable on all devices.\n\nYou can further tweak breakpoints and widths as needed for your app.  \nNo HTML changes are required for this CSS to work.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_243d4d66-c4ec-4e33-b2ca-4abc250dcbc8",
+      "result": {
+        "timings": {
+          "firstProgress": 1824,
+          "totalElapsed": 30296
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "/* --- Vertical Sidebar Styles --- */\n.RibbonMenu {\n  width: 220px;\n  min-width: 220px;\n  height: 100vh;\n  background: #f5f5f5;\n  display: flex;\n  flex-direction: column;\n  border-right: 1px solid #ddd;\n  padding-top: 10px;\n  box-sizing: border-box;\n  position: relative;\n  z-index: 10;\n}\n\n#RibbonNavBar {\n  flex-direction: column;\n  align-items: stretch;\n  height: 100%;\n  padding: 0;\n  background: transparent;\n  border: none;\n  box-shadow: none;\n}\n\n.navbar-brand.setwidth {\n  margin-bottom: 30px;\n  display: flex;\n  justify-content: center;\n}\n\nul.nav {\n  flex-direction: column !important;\n  width: 100%;\n  padding-left: 0;\n}\n\nul.nav li {\n  width: 100%;\n  margin: 0;\n  border-radius: 0;\n  margin-bottom: 5px;\n}\n\nul.nav li a.nav-link {\n  display: flex;\n  align-items: center;\n  padding: 12px 20px;\n  color: #333;\n  border-radius: 4px;\n  transition: background 0.2s, color 0.2s;\n}\n\nul.nav li.active-route a.nav-link,\nul.nav li a.nav-link:hover {\n  background: #1737BC;\n  color: #fff !important;\n}\n\n.nav-icons {\n  margin-right: 10px;\n  width: 24px;\n  height: 24px;\n}\n\n/* Facepile menu at the bottom */\n.navbar-nav.navbar-right.setwidth {\n  margin-top: auto;\n  flex-direction: column;\n  align-items: center;\n}\n\n#LoggedInUser {\n  margin-bottom: 20px;\n  border-radius: 50%;\n  width: 40px;\n  height: 40px;\n  line-height: 40px;\n  color: #fff;\n  font-weight: bold;\n  font-size: 18px;\n  text-align: center;\n  cursor: pointer;\n  background: #1737BC;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n/* --- Responsive Styles --- */\n@media (max-width: 900px) {\n  .RibbonMenu {\n    width: 60px;\n    min-width: 60px;\n    padding-top: 5px;\n  }\n  .navbar-brand.setwidth {\n    margin-bottom: 10px;\n  }\n  #logo {\n    width: 40px;\n    height: 40px;\n    padding-left: 0;\n  }\n  ul.nav li a.nav-link {\n    padding: 10px 8px;\n    font-size: 0;\n    justify-content: center;\n  }\n  ul.nav li a.nav-link .nav-icons {\n    margin-right: 0;\n  }\n  ul.nav li a.nav-link div,\n  ul.nav li a.nav-link span,\n  ul.nav li a.nav-link br {\n    display: none !important;\n  }\n  ul.nav li a.nav-link .nav-icons {\n    display: inline-block !important;\n  }\n  #LoggedInUser {\n    width: 36px;\n    height: 36px;\n    font-size: 14px;\n    margin-bottom: 10px;\n  }\n}\n\n@media (max-width: 600px) {\n  .RibbonMenu {\n    position: fixed;\n    left: 0;\n    top: 0;\n    height: 100vh;\n    z-index: 1000;\n    width: 48px;\n    min-width: 48px;\n    padding-top: 0;\n    border-right: 1px solid #ccc;\n  }\n  #RibbonNavBar {\n    padding: 0;\n  }\n  .navbar-brand.setwidth {\n    margin-bottom: 5px;\n  }\n  #logo {\n    width: 32px;\n    height: 32px;\n  }\n  ul.nav li {\n    margin-bottom: 2px;\n  }\n  #LoggedInUser {\n    width: 32px;\n    height: 32px;\n    font-size: 12px;\n    margin-bottom: 5px;\n  }\n}\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/ribbonmenu/ribbonmenu.component.css",
+                "scheme": "file"
+              },
+              "language": "css",
+              "markdownBeforeBlock": "Here’s how to style your RibbonMenu as a vertical left menu and make it responsive.  \nAdd the following at the **end** of your :\n\n"
+            }
+          ],
+          "modelMessageId": "ee82a2ec-f789-43ab-a351-a669981a4d74",
+          "responseId": "d8a64a5e-7412-4ad7-9200-376ecd6849bd",
+          "sessionId": "2804d435-3e5d-4c3b-bf75-6976ca64c068",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "Copilotaiadmin1",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/171037490",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\ribbonmenu\\ribbonmenu.component.css",
+            "_sep": 1,
+            "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/ribbonmenu/ribbonmenu.component.css",
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/ribbonmenu/ribbonmenu.component.css",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1747827841220
+    },
+    {
+      "requestId": "request_ba7185cd-9583-42e6-8b77-2705d26b703c",
+      "message": {
+        "text": "the left side menu and content is not alligned properly solve it",
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 64
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 65
+            },
+            "text": "the left side menu and content is not alligned properly solve it",
+            "kind": "text"
+          }
+        ]
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.selection",
+            "name": "file:approot.component.html",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\approot\\approot.component.html",
+                "_sep": 1,
+                "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/approot/approot.component.html",
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/approot/approot.component.html",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 4,
+                "startColumn": 2,
+                "endLineNumber": 22,
+                "endColumn": 22,
+                "selectionStartLineNumber": 4,
+                "selectionStartColumn": 2,
+                "positionLineNumber": 22,
+                "positionColumn": 22
+              }
+            },
+            "modelDescription": "User's active selection"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "To properly align the left menu and content, you should:\n\n- Use a flex container for the main layout (sidebar + content).\n- Remove the outer `<perfect-scrollbar>` that wraps both sidebar and content.\n- Place the sidebar and content as siblings inside a flex container.\n- Let the content area handle its own scrolling.\n\nHere’s how you can update your code:\n\n````html\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\approot\\approot.component.html",
+            "_sep": 1,
+            "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/approot/approot.component.html",
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/approot/approot.component.html",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "<!-- Copyright © 2018 - 2019 VEST, Inc. All rights reserved. -->\n\n<div id=\"CompleteHomePage\" [ngClass]=\"{ 'LogeddInView': isLoggedIn }\" style=\"height: 100vh; display: flex; flex-direction: column;\">\n  <div *ngIf=\"isLoggedIn\" style=\"flex: 1; display: flex; min-height: 0;\">\n    <!-- Sidebar -->\n    <div *ngIf=\"isSupportedBrowser\" style=\"width: 220px; background: #f5f5f5; height: 100vh; flex-shrink: 0;\">\n      <app-ribbonmenu></app-ribbonmenu>\n    </div>\n    <!-- Main Content -->\n    <div id=\"HeaderAndContent\" style=\"flex: 1; display: flex; flex-direction: column; min-width: 0;\">\n      <perfect-scrollbar [style.maxHeight]=\"'100vh'\" [style.maxWidth]=\"'100%'\">\n        <div id=\"Content\" ngClass=\"ViewerContent\">\n          <router-outlet></router-outlet>\n        </div>\n      </perfect-scrollbar>\n    </div>\n  </div>\n\n  <perfect-scrollbar class=\"scroll-container\" [scrollIndicators]=\"true\" *ngIf=\"!isLoggedIn\">\n    <div>\n      <div id=\"Header\" *ngIf=\"isSupportedBrowser\">\n        <app-ribbonmenu></app-ribbonmenu>\n      </div>\n      <div id=\"CompleteHomePage\" [style.maxHeight]=\"'calc(100vh - 110px)'\" [style.maxWidth]=\"'100%'\">\n        <router-outlet></router-outlet>\n      </div>\n    </div>\n  </perfect-scrollbar>\n\n  <app-cookie-message (cookieConsentAcceptedFlag)='updateShowCookieBanner($event)' *ngIf=\"showCookieBanner\"></app-cookie-message>\n  <footer id=\"footer\" [showFooterLinks]=\"showFooterLinks\" *ngIf=\"isSupportedBrowser\"></footer>\n  <span id=\"ServiceStatus\">Ready</span>\n</div>\n````\n\n**Key changes:**\n- The main flex container (`display: flex; flex-direction: column; height: 100vh;`) wraps everything.\n- When logged in, sidebar and content are siblings in a horizontal flex row.\n- The content area uses its own `<perfect-scrollbar>` for scrolling.\n- `min-width: 0; min-height: 0;` ensures proper flexbox shrinking and scrolling.\n\nThis will align your sidebar and content correctly and make the layout responsive.  \nYou may want to move inline styles to CSS for maintainability.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_cc05ebcf-373e-4c0b-9cab-8d5748635b9e",
+      "result": {
+        "timings": {
+          "firstProgress": 1214,
+          "totalElapsed": 18698
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "<!-- Copyright © 2018 - 2019 VEST, Inc. All rights reserved. -->\n\n<div id=\"CompleteHomePage\" [ngClass]=\"{ 'LogeddInView': isLoggedIn }\" style=\"height: 100vh; display: flex; flex-direction: column;\">\n  <div *ngIf=\"isLoggedIn\" style=\"flex: 1; display: flex; min-height: 0;\">\n    <!-- Sidebar -->\n    <div *ngIf=\"isSupportedBrowser\" style=\"width: 220px; background: #f5f5f5; height: 100vh; flex-shrink: 0;\">\n      <app-ribbonmenu></app-ribbonmenu>\n    </div>\n    <!-- Main Content -->\n    <div id=\"HeaderAndContent\" style=\"flex: 1; display: flex; flex-direction: column; min-width: 0;\">\n      <perfect-scrollbar [style.maxHeight]=\"'100vh'\" [style.maxWidth]=\"'100%'\">\n        <div id=\"Content\" ngClass=\"ViewerContent\">\n          <router-outlet></router-outlet>\n        </div>\n      </perfect-scrollbar>\n    </div>\n  </div>\n\n  <perfect-scrollbar class=\"scroll-container\" [scrollIndicators]=\"true\" *ngIf=\"!isLoggedIn\">\n    <div>\n      <div id=\"Header\" *ngIf=\"isSupportedBrowser\">\n        <app-ribbonmenu></app-ribbonmenu>\n      </div>\n      <div id=\"CompleteHomePage\" [style.maxHeight]=\"'calc(100vh - 110px)'\" [style.maxWidth]=\"'100%'\">\n        <router-outlet></router-outlet>\n      </div>\n    </div>\n  </perfect-scrollbar>\n\n  <app-cookie-message (cookieConsentAcceptedFlag)='updateShowCookieBanner($event)' *ngIf=\"showCookieBanner\"></app-cookie-message>\n  <footer id=\"footer\" [showFooterLinks]=\"showFooterLinks\" *ngIf=\"isSupportedBrowser\"></footer>\n  <span id=\"ServiceStatus\">Ready</span>\n</div>\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/approot/approot.component.html",
+                "scheme": "file"
+              },
+              "language": "html",
+              "markdownBeforeBlock": "To properly align the left menu and content, you should:\n\n- Use a flex container for the main layout (sidebar + content).\n- Remove the outer `<perfect-scrollbar>` that wraps both sidebar and content.\n- Place the sidebar and content as siblings inside a flex container.\n- Let the content area handle its own scrolling.\n\nHere’s how you can update your code:\n\n"
+            }
+          ],
+          "modelMessageId": "487e353c-1244-4e97-9e4d-66b574527002",
+          "responseId": "4cf468cb-2ef9-4da9-89a5-172b64b83731",
+          "sessionId": "2804d435-3e5d-4c3b-bf75-6976ca64c068",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "Copilotaiadmin1",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/171037490",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\approot\\approot.component.html",
+            "_sep": 1,
+            "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/approot/approot.component.html",
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/approot/approot.component.html",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1747828312429
+    },
+    {
+      "requestId": "request_9bd88f5f-8974-42ad-8cb5-0aee0b7bf9b4",
+      "message": {
+        "text": "create a header component.",
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 26
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 27
+            },
+            "text": "create a header component.",
+            "kind": "text"
+          }
+        ]
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "directory",
+            "value": {
+              "$mid": 1,
+              "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common",
+              "_sep": 1,
+              "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common",
+              "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common",
+              "scheme": "file"
+            },
+            "id": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common",
+            "name": "common"
+          }
+        ]
+      },
+      "response": [
+        {
+          "kind": "toolInvocationSerialized",
+          "invocationMessage": {
+            "value": "Searching common for \"create a header component.\"",
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {}
+          },
+          "pastTenseMessage": {
+            "value": "Searched common for \"create a header component.\", 25 results",
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {}
+          },
+          "isConfirmed": true,
+          "isComplete": true,
+          "resultDetails": [
+            {
+              "$mid": 1,
+              "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\column-options\\column-options.component.html",
+              "_sep": 1,
+              "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/column-options/column-options.component.html",
+              "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/column-options/column-options.component.html",
+              "scheme": "file"
+            },
+            {
+              "$mid": 1,
+              "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\column-options\\column-options.component.ts",
+              "_sep": 1,
+              "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/column-options/column-options.component.ts",
+              "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/column-options/column-options.component.ts",
+              "scheme": "file"
+            },
+            {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\cookie-message\\cookie-message.component.css",
+                "_sep": 1,
+                "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/cookie-message/cookie-message.component.css",
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/cookie-message/cookie-message.component.css",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 27,
+                "startColumn": 1,
+                "endLineNumber": 43,
+                "endColumn": 1
+              }
+            },
+            {
+              "$mid": 1,
+              "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\cookie-message\\cookie-message.component.html",
+              "_sep": 1,
+              "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/cookie-message/cookie-message.component.html",
+              "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/cookie-message/cookie-message.component.html",
+              "scheme": "file"
+            },
+            {
+              "$mid": 1,
+              "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\cookie-message\\cookie-message.component.spec.ts",
+              "_sep": 1,
+              "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/cookie-message/cookie-message.component.spec.ts",
+              "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/cookie-message/cookie-message.component.spec.ts",
+              "scheme": "file"
+            },
+            {
+              "$mid": 1,
+              "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\cookie-message\\cookie-message.component.ts",
+              "_sep": 1,
+              "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/cookie-message/cookie-message.component.ts",
+              "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/cookie-message/cookie-message.component.ts",
+              "scheme": "file"
+            },
+            {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\footer\\footer.component.css",
+                "_sep": 1,
+                "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/footer/footer.component.css",
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/footer/footer.component.css",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 96,
+                "endColumn": 1
+              }
+            },
+            {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\footer\\footer.component.html",
+                "_sep": 1,
+                "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/footer/footer.component.html",
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/footer/footer.component.html",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 50,
+                "endColumn": 1
+              }
+            },
+            {
+              "$mid": 1,
+              "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\footer\\footer.component.spec.ts",
+              "_sep": 1,
+              "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/footer/footer.component.spec.ts",
+              "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/footer/footer.component.spec.ts",
+              "scheme": "file"
+            },
+            {
+              "$mid": 1,
+              "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\footer\\footer.component.ts",
+              "_sep": 1,
+              "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/footer/footer.component.ts",
+              "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/footer/footer.component.ts",
+              "scheme": "file"
+            },
+            {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\ribbonmenu\\ribbonmenu.component.css",
+                "_sep": 1,
+                "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/ribbonmenu/ribbonmenu.component.css",
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/ribbonmenu/ribbonmenu.component.css",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 45,
+                "startColumn": 1,
+                "endLineNumber": 83,
+                "endColumn": 1
+              }
+            },
+            {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\ribbonmenu\\ribbonmenu.component.html",
+                "_sep": 1,
+                "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/ribbonmenu/ribbonmenu.component.html",
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/ribbonmenu/ribbonmenu.component.html",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 121,
+                "endColumn": 1
+              }
+            },
+            {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\ribbonmenu\\ribbonmenu.component.html",
+                "_sep": 1,
+                "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/ribbonmenu/ribbonmenu.component.html",
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/ribbonmenu/ribbonmenu.component.html",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 135,
+                "startColumn": 1,
+                "endLineNumber": 216,
+                "endColumn": 1
+              }
+            },
+            {
+              "$mid": 1,
+              "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\ribbonmenu\\ribbonmenu.component.spec.ts",
+              "_sep": 1,
+              "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/ribbonmenu/ribbonmenu.component.spec.ts",
+              "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/ribbonmenu/ribbonmenu.component.spec.ts",
+              "scheme": "file"
+            },
+            {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\ribbonmenu\\ribbonmenu.component.ts",
+                "_sep": 1,
+                "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/ribbonmenu/ribbonmenu.component.ts",
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/ribbonmenu/ribbonmenu.component.ts",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 464,
+                "endColumn": 1
+              }
+            },
+            {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\subscription-details\\subscription-details.component.css",
+                "_sep": 1,
+                "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/subscription-details/subscription-details.component.css",
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/subscription-details/subscription-details.component.css",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 44,
+                "endColumn": 1
+              }
+            },
+            {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\user-details\\user-details.component.css",
+                "_sep": 1,
+                "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/user-details/user-details.component.css",
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/user-details/user-details.component.css",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 44,
+                "endColumn": 1
+              }
+            },
+            {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\user-details\\user-details.component.css",
+                "_sep": 1,
+                "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/user-details/user-details.component.css",
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/user-details/user-details.component.css",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 93,
+                "startColumn": 1,
+                "endLineNumber": 124,
+                "endColumn": 1
+              }
+            },
+            {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\user-details\\user-details.component.html",
+                "_sep": 1,
+                "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/user-details/user-details.component.html",
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/user-details/user-details.component.html",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 22,
+                "endColumn": 1
+              }
+            },
+            {
+              "$mid": 1,
+              "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\user-details\\user-details.component.spec.ts",
+              "_sep": 1,
+              "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/user-details/user-details.component.spec.ts",
+              "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/user-details/user-details.component.spec.ts",
+              "scheme": "file"
+            },
+            {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\user-details\\user-details.component.ts",
+                "_sep": 1,
+                "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/user-details/user-details.component.ts",
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/user-details/user-details.component.ts",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 14,
+                "endColumn": 1
+              }
+            },
+            {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\user-details\\user-details.component.ts",
+                "_sep": 1,
+                "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/user-details/user-details.component.ts",
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/user-details/user-details.component.ts",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 57,
+                "startColumn": 1,
+                "endLineNumber": 80,
+                "endColumn": 1
+              }
+            },
+            {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\user-details\\user-details.component.ts",
+                "_sep": 1,
+                "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/user-details/user-details.component.ts",
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/user-details/user-details.component.ts",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 82,
+                "startColumn": 3,
+                "endLineNumber": 89,
+                "endColumn": 4
+              }
+            },
+            {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\user-details\\user-details.component.ts",
+                "_sep": 1,
+                "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/user-details/user-details.component.ts",
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/user-details/user-details.component.ts",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 91,
+                "startColumn": 3,
+                "endLineNumber": 123,
+                "endColumn": 4
+              }
+            },
+            {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\user-details\\user-details.component.ts",
+                "_sep": 1,
+                "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/user-details/user-details.component.ts",
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/user-details/user-details.component.ts",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 160,
+                "startColumn": 3,
+                "endLineNumber": 344,
+                "endColumn": 1
+              }
+            }
+          ],
+          "toolCallId": "4b24527b-b103-40a4-bb2b-de87c39eada4",
+          "toolId": "copilot_searchCodebase"
+        },
+        {
+          "value": "Here’s a simple Angular header component scaffold for your project:\n\n**1. Generate the component (in terminal):**\n```sh\nng generate component components/common/header\n```\n\n**2. Example header.component.html:**\n````html\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\header\\header.component.html",
+            "_sep": 1,
+            "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/header/header.component.html",
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/header/header.component.html",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "<header class=\"app-header\">\n  <div class=\"header-left\">\n    <img src=\"./assets/Images/logo/OPSLogo.svg\" alt=\"OPS Logo\" class=\"header-logo\" />\n    <span class=\"header-title\">OPS Admin App</span>\n  </div>\n  <div class=\"header-right\">\n    <!-- Add user info, notifications, etc. here -->\n    <ng-content></ng-content>\n  </div>\n</header>\n````\n\n**3. Example header.component.css:**\n````css\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\header\\header.component.css",
+            "_sep": 1,
+            "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/header/header.component.css",
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/header/header.component.css",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": ".app-header {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  background: #1737BC;\n  color: #fff;\n  padding: 0 24px;\n  height: 56px;\n  box-shadow: 0 2px 4px rgba(0,0,0,0.03);\n}\n\n.header-logo {\n  height: 36px;\n  margin-right: 16px;\n}\n\n.header-title {\n  font-size: 20px;\n  font-weight: 600;\n}\n\n.header-right {\n  display: flex;\n  align-items: center;\n}\n````\n\n**4. Example header.component.ts:**\n````ts\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\header\\header.component.ts",
+            "_sep": 1,
+            "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/header/header.component.ts",
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/header/header.component.ts",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-header',\n  templateUrl: './header.component.html',\n  styleUrls: ['./header.component.css']\n})\nexport class HeaderComponent { }\n````\n\n**5. Usage in your main layout:**\n```html\n<app-header></app-header>\n```\n\nYou can expand this header with navigation, user info, or other controls as needed.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_a157c912-e791-4d26-93c6-f9b4b420f0d8",
+      "result": {
+        "timings": {
+          "firstProgress": 12539,
+          "totalElapsed": 26103
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "ng generate component components/common/header\n",
+              "language": "sh",
+              "markdownBeforeBlock": "Here’s a simple Angular header component scaffold for your project:\n\n**1. Generate the component (in terminal):**\n"
+            },
+            {
+              "code": "<header class=\"app-header\">\n  <div class=\"header-left\">\n    <img src=\"./assets/Images/logo/OPSLogo.svg\" alt=\"OPS Logo\" class=\"header-logo\" />\n    <span class=\"header-title\">OPS Admin App</span>\n  </div>\n  <div class=\"header-right\">\n    <!-- Add user info, notifications, etc. here -->\n    <ng-content></ng-content>\n  </div>\n</header>\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/header/header.component.html",
+                "scheme": "file"
+              },
+              "language": "html",
+              "markdownBeforeBlock": "\n**2. Example header.component.html:**\n"
+            },
+            {
+              "code": ".app-header {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  background: #1737BC;\n  color: #fff;\n  padding: 0 24px;\n  height: 56px;\n  box-shadow: 0 2px 4px rgba(0,0,0,0.03);\n}\n\n.header-logo {\n  height: 36px;\n  margin-right: 16px;\n}\n\n.header-title {\n  font-size: 20px;\n  font-weight: 600;\n}\n\n.header-right {\n  display: flex;\n  align-items: center;\n}\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/header/header.component.css",
+                "scheme": "file"
+              },
+              "language": "css",
+              "markdownBeforeBlock": "\n**3. Example header.component.css:**\n"
+            },
+            {
+              "code": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-header',\n  templateUrl: './header.component.html',\n  styleUrls: ['./header.component.css']\n})\nexport class HeaderComponent { }\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/header/header.component.ts",
+                "scheme": "file"
+              },
+              "language": "ts",
+              "markdownBeforeBlock": "\n**4. Example header.component.ts:**\n"
+            },
+            {
+              "code": "<app-header></app-header>\n",
+              "language": "html",
+              "markdownBeforeBlock": "\n**5. Usage in your main layout:**\n"
+            }
+          ],
+          "modelMessageId": "f50e48ad-78b2-47c2-8306-11aad75f6c89",
+          "responseId": "e86082ad-3200-4aa6-a094-7f7717f53107",
+          "sessionId": "2804d435-3e5d-4c3b-bf75-6976ca64c068",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "Copilotaiadmin1",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/171037490",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [],
+      "codeCitations": [
+        {
+          "kind": "codeCitation",
+          "value": {
+            "$mid": 1,
+            "path": "/ttaylor22/mean-stackcmp/tree/833d837ea2c972f506d85b9e98d83c958c7ecedf/src/app/header/header.component.ts",
+            "scheme": "https",
+            "authority": "github.com"
+          },
+          "license": "unknown",
+          "snippet": "{ Component } from '@angular/core';\n\n@Component({\n  selector: 'app-header',\n  templateUrl: './header.component.html',\n  styleUrls: ['./header.component.css']\n})\nexport class HeaderComponent { }"
+        },
+        {
+          "kind": "codeCitation",
+          "value": {
+            "$mid": 1,
+            "path": "/OzkrMonroy/financial-complete-delete-later/tree/c58a647c6238f8f6dd8cc354c1d7c7b2755c4818/src/app/components/header/header.component.ts",
+            "scheme": "https",
+            "authority": "github.com"
+          },
+          "license": "unknown",
+          "snippet": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-header',\n  templateUrl: './header.component.html',\n  styleUrls: ['./header.component.css']\n})\nexport class HeaderComponent {"
+        },
+        {
+          "kind": "codeCitation",
+          "value": {
+            "$mid": 1,
+            "path": "/santriptmehta/angular-note/tree/2430ef4abea67fa99dda0ece6bfe96e3107aeb45/src/app/header/header.component.ts",
+            "scheme": "https",
+            "authority": "github.com"
+          },
+          "license": "unknown",
+          "snippet": "component.ts\nimport { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-header',\n  templateUrl: './header.component.html',\n  styleUrls: ['./header.component.css']\n})\nexport"
+        }
+      ],
+      "timestamp": 1747829720080
+    },
+    {
+      "requestId": "request_a0430ded-9e45-4737-97f8-b08a74238ef2",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 72
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 73
+            },
+            "text": "align header at top, ribbon menu on left side and maibn content in right",
+            "kind": "text"
+          }
+        ],
+        "text": "align header at top, ribbon menu on left side and maibn content in right"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:approot.component.html",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\approot\\approot.component.html",
+                "_sep": 1,
+                "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/approot/approot.component.html",
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/approot/approot.component.html",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 38,
+                "endColumn": 104
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "To align the header at the top, the ribbon menu on the left, and the main content on the right, you need a layout like this:\n\n- **Header**: full width at the top\n- **Below header**: a flex row with sidebar (ribbon menu) and main content\n\nHere’s how to update your ",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "inlineReference",
+          "inlineReference": {
+            "$mid": 1,
+            "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\approot\\approot.component.html",
+            "_sep": 1,
+            "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/approot/approot.component.html",
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/approot/approot.component.html",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": ":\n\n````html\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\approot\\approot.component.html",
+            "_sep": 1,
+            "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/approot/approot.component.html",
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/approot/approot.component.html",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "<!-- Copyright © 2018 - 2019 VEST, Inc. All rights reserved. -->\n\n<div id=\"CompleteHomePage\" [ngClass]=\"{ 'LogeddInView': isLoggedIn }\" style=\"height: 100vh; display: flex; flex-direction: column;\">\n  <!-- Header at the top -->\n  <div id=\"Header\" *ngIf=\"isSupportedBrowser\">\n    <app-header></app-header>\n  </div>\n\n  <!-- Main area: sidebar + content -->\n  <div *ngIf=\"isLoggedIn\" style=\"flex: 1; display: flex; min-height: 0;\">\n    <!-- Sidebar (left) -->\n    <div *ngIf=\"isSupportedBrowser\" style=\"width: 220px; background: #f5f5f5; height: 100%; flex-shrink: 0;\">\n      <app-ribbonmenu></app-ribbonmenu>\n    </div>\n    <!-- Main Content (right) -->\n    <div id=\"HeaderAndContent\" style=\"flex: 1; display: flex; flex-direction: column; min-width: 0;\">\n      <perfect-scrollbar [style.maxHeight]=\"'100%'\" [style.maxWidth]=\"'100%'\">\n        <div id=\"Content\" ngClass=\"ViewerContent\">\n          <router-outlet></router-outlet>\n        </div>\n      </perfect-scrollbar>\n    </div>\n  </div>\n\n  <!-- Not logged in view -->\n  <perfect-scrollbar class=\"scroll-container\" [scrollIndicators]=\"true\" *ngIf=\"!isLoggedIn\" style=\"flex: 1;\">\n    <div>\n      <div id=\"Header\" *ngIf=\"isSupportedBrowser\">\n        <app-header></app-header>\n      </div>\n      <div id=\"CompleteHomePage\" [style.maxHeight]=\"'calc(100vh - 110px)'\" [style.maxWidth]=\"'100%'\">\n        <router-outlet></router-outlet>\n      </div>\n    </div>\n  </perfect-scrollbar>\n\n  <app-cookie-message (cookieConsentAcceptedFlag)='updateShowCookieBanner($event)' *ngIf=\"showCookieBanner\"></app-cookie-message>\n  <footer id=\"footer\" [showFooterLinks]=\"showFooterLinks\" *ngIf=\"isSupportedBrowser\"></footer>\n  <span id=\"ServiceStatus\">Ready</span>\n</div>\n````\n\n**Key points:**\n- The header is always at the top.\n- The main area is a flex row: sidebar on the left, content on the right.\n- The sidebar and content fill the space below the header.\n- Use `height: 100vh` and `flex: 1` to ensure proper stretching and scrolling.\n\nMove inline styles to CSS for maintainability if needed.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_c9b717cf-946a-423e-a7a1-7d0b1736b326",
+      "result": {
+        "timings": {
+          "firstProgress": 1241,
+          "totalElapsed": 7544
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "<!-- Copyright © 2018 - 2019 VEST, Inc. All rights reserved. -->\n\n<div id=\"CompleteHomePage\" [ngClass]=\"{ 'LogeddInView': isLoggedIn }\" style=\"height: 100vh; display: flex; flex-direction: column;\">\n  <!-- Header at the top -->\n  <div id=\"Header\" *ngIf=\"isSupportedBrowser\">\n    <app-header></app-header>\n  </div>\n\n  <!-- Main area: sidebar + content -->\n  <div *ngIf=\"isLoggedIn\" style=\"flex: 1; display: flex; min-height: 0;\">\n    <!-- Sidebar (left) -->\n    <div *ngIf=\"isSupportedBrowser\" style=\"width: 220px; background: #f5f5f5; height: 100%; flex-shrink: 0;\">\n      <app-ribbonmenu></app-ribbonmenu>\n    </div>\n    <!-- Main Content (right) -->\n    <div id=\"HeaderAndContent\" style=\"flex: 1; display: flex; flex-direction: column; min-width: 0;\">\n      <perfect-scrollbar [style.maxHeight]=\"'100%'\" [style.maxWidth]=\"'100%'\">\n        <div id=\"Content\" ngClass=\"ViewerContent\">\n          <router-outlet></router-outlet>\n        </div>\n      </perfect-scrollbar>\n    </div>\n  </div>\n\n  <!-- Not logged in view -->\n  <perfect-scrollbar class=\"scroll-container\" [scrollIndicators]=\"true\" *ngIf=\"!isLoggedIn\" style=\"flex: 1;\">\n    <div>\n      <div id=\"Header\" *ngIf=\"isSupportedBrowser\">\n        <app-header></app-header>\n      </div>\n      <div id=\"CompleteHomePage\" [style.maxHeight]=\"'calc(100vh - 110px)'\" [style.maxWidth]=\"'100%'\">\n        <router-outlet></router-outlet>\n      </div>\n    </div>\n  </perfect-scrollbar>\n\n  <app-cookie-message (cookieConsentAcceptedFlag)='updateShowCookieBanner($event)' *ngIf=\"showCookieBanner\"></app-cookie-message>\n  <footer id=\"footer\" [showFooterLinks]=\"showFooterLinks\" *ngIf=\"isSupportedBrowser\"></footer>\n  <span id=\"ServiceStatus\">Ready</span>\n</div>\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/approot/approot.component.html",
+                "scheme": "file"
+              },
+              "language": "html",
+              "markdownBeforeBlock": "To align the header at the top, the ribbon menu on the left, and the main content on the right, you need a layout like this:\n\n- **Header**: full width at the top\n- **Below header**: a flex row with sidebar (ribbon menu) and main content\n\nHere’s how to update your :\n\n"
+            }
+          ],
+          "modelMessageId": "f18faafb-395e-463f-9c96-19f1690e3a31",
+          "responseId": "d7648d1d-803e-48c6-b9c1-c7a5d00685ce",
+          "sessionId": "2804d435-3e5d-4c3b-bf75-6976ca64c068",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "Copilotaiadmin1",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/171037490",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\approot\\approot.component.html",
+            "_sep": 1,
+            "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/approot/approot.component.html",
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/approot/approot.component.html",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1747887331568
+    },
+    {
+      "requestId": "request_ad898826-3396-43c4-a7a7-d4e8b0ec01f6",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 67
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 68
+            },
+            "text": "modify the header logo align to left side and ul menu on right side",
+            "kind": "text"
+          }
+        ],
+        "text": "modify the header logo align to left side and ul menu on right side"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:header.component.html",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\header\\header.component.html",
+                "_sep": 1,
+                "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/header/header.component.html",
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/header/header.component.html",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 1,
+                "startColumn": 1,
+                "endLineNumber": 36,
+                "endColumn": 63
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "````html\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\header\\header.component.html",
+            "_sep": 1,
+            "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/header/header.component.html",
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/header/header.component.html",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "<header class=\"app-header\">\n  <div class=\"header-content\" *ngIf=\"(appUser != null) && (appUser != undefined)\">\n    <!-- Logo aligned left -->\n    <div class=\"header-left\">\n      <img [src]=\"setLogo()\" id=\"logo\">\n    </div>\n    <!-- Menu aligned right -->\n    <ul class=\"header-menu\">\n      <li class=\"rightmargin7\" (mouseenter)=\"changeImageonHover('helpImage')\"\n        (mouseleave)=\"RemoveHoverImage('helpImage')\">\n        <img id=\"helpImage\" src=\"\" [src]=\"HelpImgSrc\" (click)=\"showHelpPdf()\">\n      </li>\n      <li class=\"nav-item\" id=\"LoggedInUser\" [style.background-color]=\"appUser.colorCode\" [ngbPopover]=\"FacePileMenu\"\n        placement=\"bottom-right\" popoverClass=\"LoggedUserPopover noborder\" autoClose=\"true\" container=\"body\"\n        style=\"text-align: center;\">\n        <a id=\"text\">{{appUser.nameInitials }}</a>\n      </li>\n      <ng-template #FacePileMenu>\n        <div id=\"LoggedUserDropdown\">\n          <div>\n            <div id=\"UserProfile\" (click)=\"NavigateToProfile()\">\n              <a class=\"dropdown-item\" id=\"LoggedInUserName\">Edit Profile</a>\n            </div>\n            <div id=\"UserProfile\" (click)=\"NavigateToSubscription()\">\n              <a class=\"dropdown-item\" id=\"LoggedInUserName\" matTooltipClass=\"ShowTextTooltip\">My Account</a>\n            </div>\n          </div>\n          <a class=\"dropdown-item noTopBorder\" id=\"Logout\" (click)=\"logoutUser()\">Sign Out</a>\n        </div>\n      </ng-template>\n    </ul>\n  </div>\n  <div id=\"header\" *ngIf=\"(appUser == null) || (appUser == undefined)\">\n    <nav id=\"RibbonNavBar\" class=\"navbar navbar-expand-lg \">\n      <div class=\"pgWidth\">\n        <div class=\"row navbar-nav mx-auto no-gutters\" id=\"ApplicationLogo\">\n          <div class=\"col-md-3\">\n            <img id=\"title\" style=\"cursor: pointer;\"\n              src=\"./assets/Images/logo/OPSLogo.svg?ApplicationVersion={{version}}\" (click)=\"GotoHomePage()\">\n          </div>\n          <div class=\"col-md-6\"></div>\n          <div class=\"col-md-3\">\n          </div>\n        </div>\n      </div>\n    </nav>\n  </div>\n</header>\n````\n\n**Add to your header.component.css for alignment:**\n````css\n/* ...existing code... */\n.header-content {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\n.header-left {\n  display: flex;\n  align-items: center;\n}\n\n.header-menu {\n  display: flex;\n  align-items: center;\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n.header-menu li {\n  margin-left: 18px;\n}\n````\n\nThis will align the logo to the left and the menu to the right in your header.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_d9efe78a-6ee0-4158-a838-8134f01c2e93",
+      "result": {
+        "timings": {
+          "firstProgress": 1572,
+          "totalElapsed": 7550
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "<header class=\"app-header\">\n  <div class=\"header-content\" *ngIf=\"(appUser != null) && (appUser != undefined)\">\n    <!-- Logo aligned left -->\n    <div class=\"header-left\">\n      <img [src]=\"setLogo()\" id=\"logo\">\n    </div>\n    <!-- Menu aligned right -->\n    <ul class=\"header-menu\">\n      <li class=\"rightmargin7\" (mouseenter)=\"changeImageonHover('helpImage')\"\n        (mouseleave)=\"RemoveHoverImage('helpImage')\">\n        <img id=\"helpImage\" src=\"\" [src]=\"HelpImgSrc\" (click)=\"showHelpPdf()\">\n      </li>\n      <li class=\"nav-item\" id=\"LoggedInUser\" [style.background-color]=\"appUser.colorCode\" [ngbPopover]=\"FacePileMenu\"\n        placement=\"bottom-right\" popoverClass=\"LoggedUserPopover noborder\" autoClose=\"true\" container=\"body\"\n        style=\"text-align: center;\">\n        <a id=\"text\">{{appUser.nameInitials }}</a>\n      </li>\n      <ng-template #FacePileMenu>\n        <div id=\"LoggedUserDropdown\">\n          <div>\n            <div id=\"UserProfile\" (click)=\"NavigateToProfile()\">\n              <a class=\"dropdown-item\" id=\"LoggedInUserName\">Edit Profile</a>\n            </div>\n            <div id=\"UserProfile\" (click)=\"NavigateToSubscription()\">\n              <a class=\"dropdown-item\" id=\"LoggedInUserName\" matTooltipClass=\"ShowTextTooltip\">My Account</a>\n            </div>\n          </div>\n          <a class=\"dropdown-item noTopBorder\" id=\"Logout\" (click)=\"logoutUser()\">Sign Out</a>\n        </div>\n      </ng-template>\n    </ul>\n  </div>\n  <div id=\"header\" *ngIf=\"(appUser == null) || (appUser == undefined)\">\n    <nav id=\"RibbonNavBar\" class=\"navbar navbar-expand-lg \">\n      <div class=\"pgWidth\">\n        <div class=\"row navbar-nav mx-auto no-gutters\" id=\"ApplicationLogo\">\n          <div class=\"col-md-3\">\n            <img id=\"title\" style=\"cursor: pointer;\"\n              src=\"./assets/Images/logo/OPSLogo.svg?ApplicationVersion={{version}}\" (click)=\"GotoHomePage()\">\n          </div>\n          <div class=\"col-md-6\"></div>\n          <div class=\"col-md-3\">\n          </div>\n        </div>\n      </div>\n    </nav>\n  </div>\n</header>\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/header/header.component.html",
+                "scheme": "file"
+              },
+              "language": "html",
+              "markdownBeforeBlock": ""
+            },
+            {
+              "code": "/* ...existing code... */\n.header-content {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\n.header-left {\n  display: flex;\n  align-items: center;\n}\n\n.header-menu {\n  display: flex;\n  align-items: center;\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n.header-menu li {\n  margin-left: 18px;\n}\n",
+              "language": "css",
+              "markdownBeforeBlock": "\n**Add to your header.component.css for alignment:**\n"
+            }
+          ],
+          "modelMessageId": "c81d4070-a0ea-4052-af2b-e4089631b010",
+          "responseId": "9bed555b-23da-4a38-bedb-6e96ff7db21f",
+          "sessionId": "2804d435-3e5d-4c3b-bf75-6976ca64c068",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "Copilotaiadmin1",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/171037490",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\header\\header.component.html",
+            "_sep": 1,
+            "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/header/header.component.html",
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/header/header.component.html",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1747887577189
+    },
+    {
+      "requestId": "request_f8420705-28ae-4f77-9b50-4199d076651f",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 66
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 67
+            },
+            "text": "align the menu in a way - image and in next line title of the menu",
+            "kind": "text"
+          }
+        ],
+        "text": "align the menu in a way - image and in next line title of the menu"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:ribbonmenu.component.html",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\ribbonmenu\\ribbonmenu.component.html",
+                "_sep": 1,
+                "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/ribbonmenu/ribbonmenu.component.html",
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/ribbonmenu/ribbonmenu.component.html",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 14,
+                "startColumn": 1,
+                "endLineNumber": 51,
+                "endColumn": 72
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "````html\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/",
+            "scheme": "file"
+          },
+          "uris": {}
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\ribbonmenu\\ribbonmenu.component.html",
+            "_sep": 1,
+            "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/ribbonmenu/ribbonmenu.component.html",
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/ribbonmenu/ribbonmenu.component.html",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "<!-- Copyright © 2018 - 2019 VEST, Inc. All rights reserved. -->\n\n<div class=\"RibbonMenu \"\n  *ngIf=\"(userRole != '') && (!router.url.includes(VerifyUserUrl) || !router.url.includes(LoginPageUrl))\">\n\n  <nav class=\"navbar navbar-expand-lg \" id=\"RibbonNavBar\">\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\" [ngSwitch]=\"userRole\">\n\n      <!-- #region VEST ADMIN SECTION - Organization -->\n      <div id=\"VestAdminRibbonTab\" class=\"collapse navbar-collapse\"\n        *ngIf=\"(userRole == 'vestadmin') && !(router.url == '/VestHomePage')\">\n\n        <ul class=\"nav mx-auto vertical-menu\" *ngSwitchCase=\"'vestadmin'\">\n          <li [routerLink]=\"[VestAdminManageOrgsUrl]\" routerLinkActive=\"\"\n            [ngClass]=\"{ 'nav-item rightmargin10 active-route ': isVESTManageOrgRouterLinkActive, 'nav-item headerColor rightmargin10' : !isVESTManageOrgRouterLinkActive }\"\n            id=\"Organizations\" (mouseenter)=\"changeImageonHover('imgOrg')\" (mouseleave)=\"RemoveHoverImage('imgOrg')\">\n            <a class=\"nav-link vertical-link\">\n              <div class=\"menu-icon\">\n                <img *ngIf=\"!(isVESTManageOrgRouterLinkActive)\" src=\"./assets/Images/RibbonMenuIcons/SVGFormat/Org.svg\"\n                  class=\"nav-icons\" id=\"imgOrg\">\n                <img *ngIf=\"(isVESTManageOrgRouterLinkActive)\"\n                  src=\"./assets/Images/RibbonMenuIcons/SVGFormat/WhiteOrg.svg\" class=\"nav-icons\">\n              </div>\n              <span class=\"menu-title\">Organizations</span>\n            </a>\n          </li>\n          <li [routerLink]=\"[VESTAdminManageIndividualUrl]\" routerLinkActive=\"\"\n            [ngClass]=\"{ 'nav-item rightmargin10 active-route ': isVESTManageIndividualRouterLinkActive, 'nav-item headerColor rightmargin10' : !isVESTManageIndividualRouterLinkActive }\"\n            id=\"Individuals\" (mouseenter)=\"changeImageonHover('imgIndUsers')\"\n            (mouseleave)=\"RemoveHoverImage('imgIndUsers')\">\n            <a class=\"nav-link vertical-link\">\n              <div class=\"menu-icon\">\n                <img *ngIf=\"!(isVESTManageIndividualRouterLinkActive)\"\n                  src=\"./assets/Images/RibbonMenuIcons/SVGFormat/Users.svg\" class=\"nav-icons\" id=\"imgIndUsers\">\n                <img *ngIf=\"(isVESTManageIndividualRouterLinkActive)\"\n                  src=\"./assets/Images/RibbonMenuIcons/SVGFormat/WhiteUsers.svg\" class=\"nav-icons\">\n              </div>\n              <span class=\"menu-title\">Individuals</span>\n            </a>\n          </li>\n          <li [routerLink]=\"[VESTAdminManageOEMSuppliedUrl]\" routerLinkActive=\"\"\n            [ngClass]=\"{ 'nav-item rightmargin10 active-route ': isVESTManageOEMSuppliedRouterLinkActive, 'nav-item headerColor rightmargin10' : !isVESTManageOEMSuppliedRouterLinkActive }\"\n            id=\"OEMSupplied\" (mouseenter)=\"changeImageonHover('imgOEMSupplied')\"\n            (mouseleave)=\"RemoveHoverImage('imgOEMSupplied')\">\n            <a class=\"nav-link vertical-link\">\n              <div class=\"menu-icon\">\n                <img *ngIf=\"!(isVESTManageOEMSuppliedRouterLinkActive)\"\n                  src=\"./assets/Images/RibbonMenuIcons/SVGFormat/Library.svg\" class=\"nav-icons\" id=\"imgOEMSupplied\">\n                <img *ngIf=\"(isVESTManageOEMSuppliedRouterLinkActive)\"\n                  src=\"./assets/Images/RibbonMenuIcons/SVGFormat/WhiteLibrary.svg\" class=\"nav-icons\">\n              </div>\n              <span class=\"menu-title\">OEM Supplied</span>\n            </a>\n          </li>\n          <li [routerLink]=\"[VESTAdminAllUsersUrl]\" routerLinkActive=\"\"\n            [ngClass]=\"{ 'nav-item rightmargin10 active-route ': isVESTAdminAllUsersRouterLinkActive, 'nav-item headerColor rightmargin10' : !isVESTAdminAllUsersRouterLinkActive }\"\n            id=\"AllUsers\" (mouseenter)=\"changeImageonHover('imgAllUsers')\"\n            (mouseleave)=\"RemoveHoverImage('imgAllUsers')\">\n            <a class=\"nav-link vertical-link\">\n              <div class=\"menu-icon\">\n                <img *ngIf=\"!(isVESTAdminAllUsersRouterLinkActive)\"\n                  src=\"./assets/Images/RibbonMenuIcons/SVGFormat/Library.svg\" class=\"nav-icons\" id=\"imgAllUsers\">\n                <img *ngIf=\"(isVESTAdminAllUsersRouterLinkActive)\"\n                  src=\"./assets/Images/RibbonMenuIcons/SVGFormat/WhiteLibrary.svg\" class=\"nav-icons\">\n              </div>\n              <span class=\"menu-title\">All Users</span>\n            </a>\n          </li>\n          <li [routerLink]=\"[VESTAdminProductManageUrl]\" routerLinkActive=\"\"\n            [ngClass]=\"{ 'nav-item rightmargin10 active-route ': isVESTAdminProductManageRouterLinkActive, 'nav-item headerColor rightmargin10' : !isVESTAdminProductManageRouterLinkActive }\"\n            id=\"ProductManage\" (mouseenter)=\"changeImageonHover('imgProductManage')\"\n            (mouseleave)=\"RemoveHoverImage('imgProductManage')\">\n            <a class=\"nav-link vertical-link\">\n              <div class=\"menu-icon\">\n                <img *ngIf=\"!(isVESTAdminProductManageRouterLinkActive)\"\n                  src=\"./assets/Images/RibbonMenuIcons/SVGFormat/Library.svg\" class=\"nav-icons\" id=\"imgProductManage\">\n                <img *ngIf=\"(isVESTAdminProductManageRouterLinkActive)\"\n                  src=\"./assets/Images/RibbonMenuIcons/SVGFormat/WhiteLibrary.svg\" class=\"nav-icons\">\n              </div>\n              <span class=\"menu-title\">Products Management</span>\n            </a>\n          </li>\n          <li [routerLink]=\"[VESTAdminDeleteUpgToENTUrl]\" routerLinkActive=\"\"\n            [ngClass]=\"{ 'nav-item rightmargin10 active-route ': isVESTAdminDeleteUpgToENTRouterLinkActive, 'nav-item headerColor rightmargin10' : !isVESTAdminDeleteUpgToENTRouterLinkActive }\"\n            id=\"Delete\" (mouseenter)=\"changeImageonHover('imgDelete')\" (mouseleave)=\"RemoveHoverImage('imgDelete')\">\n            <a class=\"nav-link vertical-link\">\n              <div class=\"menu-icon\">\n                <img *ngIf=\"!(isVESTAdminDeleteUpgToENTRouterLinkActive)\"\n                  src=\"./assets/Images/RibbonMenuIcons/SVGFormat/Library.svg\" class=\"nav-icons\" id=\"imgDelete\">\n                <img *ngIf=\"(isVESTAdminDeleteUpgToENTRouterLinkActive)\"\n                  src=\"./assets/Images/RibbonMenuIcons/SVGFormat/WhiteLibrary.svg\" class=\"nav-icons\">\n              </div>\n              <span class=\"menu-title\">Delete Upgrade To ENT Users</span>\n            </a>\n          </li>\n        </ul>\n      </div>\n      <!-- #endregionVEST ADMIN SECTION - Organization -->\n    </div>\n  </nav>\n</div>\n````\n\n**Add to your ribbonmenu.component.css:**\n````css\n/* ...existing code... */\n.vertical-menu {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n.vertical-link {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n  padding: 16px 0 8px 0;\n}\n\n.menu-icon {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.menu-title {\n  margin-top: 6px;\n  font-size: 13px;\n  font-weight: 500;\n  color: #333;\n  word-break: break-word;\n}\n````\n\nThis will stack the icon above the menu title for each menu item and center them vertically.",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_e11a6f98-5413-4412-a532-df9870c4449a",
+      "result": {
+        "timings": {
+          "firstProgress": 1926,
+          "totalElapsed": 26698
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "<!-- Copyright © 2018 - 2019 VEST, Inc. All rights reserved. -->\n\n<div class=\"RibbonMenu \"\n  *ngIf=\"(userRole != '') && (!router.url.includes(VerifyUserUrl) || !router.url.includes(LoginPageUrl))\">\n\n  <nav class=\"navbar navbar-expand-lg \" id=\"RibbonNavBar\">\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\" [ngSwitch]=\"userRole\">\n\n      <!-- #region VEST ADMIN SECTION - Organization -->\n      <div id=\"VestAdminRibbonTab\" class=\"collapse navbar-collapse\"\n        *ngIf=\"(userRole == 'vestadmin') && !(router.url == '/VestHomePage')\">\n\n        <ul class=\"nav mx-auto vertical-menu\" *ngSwitchCase=\"'vestadmin'\">\n          <li [routerLink]=\"[VestAdminManageOrgsUrl]\" routerLinkActive=\"\"\n            [ngClass]=\"{ 'nav-item rightmargin10 active-route ': isVESTManageOrgRouterLinkActive, 'nav-item headerColor rightmargin10' : !isVESTManageOrgRouterLinkActive }\"\n            id=\"Organizations\" (mouseenter)=\"changeImageonHover('imgOrg')\" (mouseleave)=\"RemoveHoverImage('imgOrg')\">\n            <a class=\"nav-link vertical-link\">\n              <div class=\"menu-icon\">\n                <img *ngIf=\"!(isVESTManageOrgRouterLinkActive)\" src=\"./assets/Images/RibbonMenuIcons/SVGFormat/Org.svg\"\n                  class=\"nav-icons\" id=\"imgOrg\">\n                <img *ngIf=\"(isVESTManageOrgRouterLinkActive)\"\n                  src=\"./assets/Images/RibbonMenuIcons/SVGFormat/WhiteOrg.svg\" class=\"nav-icons\">\n              </div>\n              <span class=\"menu-title\">Organizations</span>\n            </a>\n          </li>\n          <li [routerLink]=\"[VESTAdminManageIndividualUrl]\" routerLinkActive=\"\"\n            [ngClass]=\"{ 'nav-item rightmargin10 active-route ': isVESTManageIndividualRouterLinkActive, 'nav-item headerColor rightmargin10' : !isVESTManageIndividualRouterLinkActive }\"\n            id=\"Individuals\" (mouseenter)=\"changeImageonHover('imgIndUsers')\"\n            (mouseleave)=\"RemoveHoverImage('imgIndUsers')\">\n            <a class=\"nav-link vertical-link\">\n              <div class=\"menu-icon\">\n                <img *ngIf=\"!(isVESTManageIndividualRouterLinkActive)\"\n                  src=\"./assets/Images/RibbonMenuIcons/SVGFormat/Users.svg\" class=\"nav-icons\" id=\"imgIndUsers\">\n                <img *ngIf=\"(isVESTManageIndividualRouterLinkActive)\"\n                  src=\"./assets/Images/RibbonMenuIcons/SVGFormat/WhiteUsers.svg\" class=\"nav-icons\">\n              </div>\n              <span class=\"menu-title\">Individuals</span>\n            </a>\n          </li>\n          <li [routerLink]=\"[VESTAdminManageOEMSuppliedUrl]\" routerLinkActive=\"\"\n            [ngClass]=\"{ 'nav-item rightmargin10 active-route ': isVESTManageOEMSuppliedRouterLinkActive, 'nav-item headerColor rightmargin10' : !isVESTManageOEMSuppliedRouterLinkActive }\"\n            id=\"OEMSupplied\" (mouseenter)=\"changeImageonHover('imgOEMSupplied')\"\n            (mouseleave)=\"RemoveHoverImage('imgOEMSupplied')\">\n            <a class=\"nav-link vertical-link\">\n              <div class=\"menu-icon\">\n                <img *ngIf=\"!(isVESTManageOEMSuppliedRouterLinkActive)\"\n                  src=\"./assets/Images/RibbonMenuIcons/SVGFormat/Library.svg\" class=\"nav-icons\" id=\"imgOEMSupplied\">\n                <img *ngIf=\"(isVESTManageOEMSuppliedRouterLinkActive)\"\n                  src=\"./assets/Images/RibbonMenuIcons/SVGFormat/WhiteLibrary.svg\" class=\"nav-icons\">\n              </div>\n              <span class=\"menu-title\">OEM Supplied</span>\n            </a>\n          </li>\n          <li [routerLink]=\"[VESTAdminAllUsersUrl]\" routerLinkActive=\"\"\n            [ngClass]=\"{ 'nav-item rightmargin10 active-route ': isVESTAdminAllUsersRouterLinkActive, 'nav-item headerColor rightmargin10' : !isVESTAdminAllUsersRouterLinkActive }\"\n            id=\"AllUsers\" (mouseenter)=\"changeImageonHover('imgAllUsers')\"\n            (mouseleave)=\"RemoveHoverImage('imgAllUsers')\">\n            <a class=\"nav-link vertical-link\">\n              <div class=\"menu-icon\">\n                <img *ngIf=\"!(isVESTAdminAllUsersRouterLinkActive)\"\n                  src=\"./assets/Images/RibbonMenuIcons/SVGFormat/Library.svg\" class=\"nav-icons\" id=\"imgAllUsers\">\n                <img *ngIf=\"(isVESTAdminAllUsersRouterLinkActive)\"\n                  src=\"./assets/Images/RibbonMenuIcons/SVGFormat/WhiteLibrary.svg\" class=\"nav-icons\">\n              </div>\n              <span class=\"menu-title\">All Users</span>\n            </a>\n          </li>\n          <li [routerLink]=\"[VESTAdminProductManageUrl]\" routerLinkActive=\"\"\n            [ngClass]=\"{ 'nav-item rightmargin10 active-route ': isVESTAdminProductManageRouterLinkActive, 'nav-item headerColor rightmargin10' : !isVESTAdminProductManageRouterLinkActive }\"\n            id=\"ProductManage\" (mouseenter)=\"changeImageonHover('imgProductManage')\"\n            (mouseleave)=\"RemoveHoverImage('imgProductManage')\">\n            <a class=\"nav-link vertical-link\">\n              <div class=\"menu-icon\">\n                <img *ngIf=\"!(isVESTAdminProductManageRouterLinkActive)\"\n                  src=\"./assets/Images/RibbonMenuIcons/SVGFormat/Library.svg\" class=\"nav-icons\" id=\"imgProductManage\">\n                <img *ngIf=\"(isVESTAdminProductManageRouterLinkActive)\"\n                  src=\"./assets/Images/RibbonMenuIcons/SVGFormat/WhiteLibrary.svg\" class=\"nav-icons\">\n              </div>\n              <span class=\"menu-title\">Products Management</span>\n            </a>\n          </li>\n          <li [routerLink]=\"[VESTAdminDeleteUpgToENTUrl]\" routerLinkActive=\"\"\n            [ngClass]=\"{ 'nav-item rightmargin10 active-route ': isVESTAdminDeleteUpgToENTRouterLinkActive, 'nav-item headerColor rightmargin10' : !isVESTAdminDeleteUpgToENTRouterLinkActive }\"\n            id=\"Delete\" (mouseenter)=\"changeImageonHover('imgDelete')\" (mouseleave)=\"RemoveHoverImage('imgDelete')\">\n            <a class=\"nav-link vertical-link\">\n              <div class=\"menu-icon\">\n                <img *ngIf=\"!(isVESTAdminDeleteUpgToENTRouterLinkActive)\"\n                  src=\"./assets/Images/RibbonMenuIcons/SVGFormat/Library.svg\" class=\"nav-icons\" id=\"imgDelete\">\n                <img *ngIf=\"(isVESTAdminDeleteUpgToENTRouterLinkActive)\"\n                  src=\"./assets/Images/RibbonMenuIcons/SVGFormat/WhiteLibrary.svg\" class=\"nav-icons\">\n              </div>\n              <span class=\"menu-title\">Delete Upgrade To ENT Users</span>\n            </a>\n          </li>\n        </ul>\n      </div>\n      <!-- #endregionVEST ADMIN SECTION - Organization -->\n    </div>\n  </nav>\n</div>\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/ribbonmenu/ribbonmenu.component.html",
+                "scheme": "file"
+              },
+              "language": "html",
+              "markdownBeforeBlock": ""
+            },
+            {
+              "code": "/* ...existing code... */\n.vertical-menu {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n}\n\n.vertical-link {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n  padding: 16px 0 8px 0;\n}\n\n.menu-icon {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n.menu-title {\n  margin-top: 6px;\n  font-size: 13px;\n  font-weight: 500;\n  color: #333;\n  word-break: break-word;\n}\n",
+              "language": "css",
+              "markdownBeforeBlock": "\n**Add to your ribbonmenu.component.css:**\n"
+            }
+          ],
+          "modelMessageId": "90dd9c5c-fff3-48de-a01f-a35bd631ace3",
+          "responseId": "d8e43b06-ff6c-4ef4-b76c-6f7cabe682d1",
+          "sessionId": "2804d435-3e5d-4c3b-bf75-6976ca64c068",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "Copilotaiadmin1",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/171037490",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\ribbonmenu\\ribbonmenu.component.html",
+            "_sep": 1,
+            "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/ribbonmenu/ribbonmenu.component.html",
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/ribbonmenu/ribbonmenu.component.html",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1747888157552
+    },
+    {
+      "requestId": "request_23f0ba35-d404-4373-9e71-61611d458846",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 95
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 96
+            },
+            "text": "properly style the FacePileMenu right side of header center alligned. and move all css to class",
+            "kind": "text"
+          }
+        ],
+        "text": "properly style the FacePileMenu right side of header center alligned. and move all css to class"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.selection",
+            "name": "file:header.component.html",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\header\\header.component.html",
+                "_sep": 1,
+                "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/header/header.component.html",
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/header/header.component.html",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 18,
+                "startColumn": 21,
+                "endLineNumber": 18,
+                "endColumn": 33,
+                "selectionStartLineNumber": 18,
+                "selectionStartColumn": 21,
+                "positionLineNumber": 18,
+                "positionColumn": 33
+              }
+            },
+            "modelDescription": "User's active selection"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "To style the FacePileMenu (user avatar and dropdown) on the right side of the header and center-align the header content, update your HTML and move all styles to CSS classes.\n\n**1. Update your HTML for semantic class usage:**\n````html\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\header\\header.component.html",
+            "_sep": 1,
+            "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/header/header.component.html",
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/header/header.component.html",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": "<header class=\"app-header\">\n  <div class=\"header-content\">\n    <!-- Logo aligned left -->\n    <div class=\"header-left\">\n      <img [src]=\"setLogo()\" id=\"logo\" class=\"header-logo\">\n    </div>\n    <!-- Menu aligned right -->\n    <ul class=\"header-menu\">\n      <li class=\"rightmargin7\" (mouseenter)=\"changeImageonHover('helpImage')\"\n        (mouseleave)=\"RemoveHoverImage('helpImage')\">\n        <img id=\"helpImage\" [src]=\"HelpImgSrc\" (click)=\"showHelpPdf()\">\n      </li>\n      <li class=\"nav-item facepile\"\n          [style.background-color]=\"appUser?.colorCode\"\n          [ngbPopover]=\"FacePileMenu\"\n          placement=\"bottom-right\"\n          popoverClass=\"LoggedUserPopover noborder\"\n          autoClose=\"true\"\n          container=\"body\">\n        <a id=\"text\" class=\"facepile-initials\">{{appUser?.nameInitials}}</a>\n      </li>\n      <ng-template #FacePileMenu>\n        <div class=\"facepile-dropdown\">\n          <div>\n            <div class=\"facepile-dropdown-item\" (click)=\"NavigateToProfile()\">\n              <a class=\"dropdown-item\">Edit Profile</a>\n            </div>\n            <div class=\"facepile-dropdown-item\" (click)=\"NavigateToSubscription()\">\n              <a class=\"dropdown-item\" matTooltipClass=\"ShowTextTooltip\">My Account</a>\n            </div>\n          </div>\n          <a class=\"dropdown-item noTopBorder\" (click)=\"logoutUser()\">Sign Out</a>\n        </div>\n      </ng-template>\n    </ul>\n  </div>\n  <div id=\"header\" *ngIf=\"!appUser\">\n    <nav id=\"RibbonNavBar\" class=\"navbar navbar-expand-lg \">\n      <div class=\"pgWidth\">\n        <div class=\"row navbar-nav mx-auto no-gutters\" id=\"ApplicationLogo\">\n          <div class=\"col-md-3\">\n            <img id=\"title\" style=\"cursor: pointer;\"\n              src=\"./assets/Images/logo/OPSLogo.svg?ApplicationVersion={{version}}\" (click)=\"GotoHomePage()\">\n          </div>\n          <div class=\"col-md-6\"></div>\n          <div class=\"col-md-3\"></div>\n        </div>\n      </div>\n    </nav>\n  </div>\n</header>\n````\n\n**2. Add/replace the following in your `header.component.css`:**\n````css\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\header\\header.component.css",
+            "_sep": 1,
+            "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/header/header.component.css",
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/header/header.component.css",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": ".app-header {\n  width: 100%;\n  background: #1737BC;\n  color: #fff;\n  box-shadow: 0 2px 4px rgba(0,0,0,0.03);\n}\n\n.header-content {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: 56px;\n  padding: 0 24px;\n}\n\n.header-left {\n  display: flex;\n  align-items: center;\n}\n\n.header-logo {\n  height: 36px;\n}\n\n.header-menu {\n  display: flex;\n  align-items: center;\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n.header-menu li {\n  margin-left: 18px;\n  display: flex;\n  align-items: center;\n}\n\n.facepile {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-radius: 50%;\n  width: 40px;\n  height: 40px;\n  color: #fff;\n  font-weight: bold;\n  font-size: 18px;\n  cursor: pointer;\n  transition: box-shadow 0.2s;\n  box-shadow: 0 1px 4px rgba(0,0,0,0.08);\n  overflow: hidden;\n}\n\n.facepile-initials {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 100%;\n  height: 100%;\n  text-decoration: none;\n  color: inherit;\n}\n\n.facepile-dropdown {\n  min-width: 180px;\n  padding: 8px 0;\n  background: #fff;\n  color: #333;\n  border-radius: 8px;\n  box-shadow: 0 2px 8px rgba(0,0,0,0.12);\n}\n\n.facepile-dropdown-item {\n  padding: 0;\n}\n\n.facepile-dropdown .dropdown-item {\n  color: #333;\n  padding: 8px 16px;\n  cursor: pointer;\n  transition: background 0.2s;\n}\n\n.facepile-dropdown .dropdown-item:hover {\n  background: #f5f5f5;\n}\n\n.noTopBorder {\n  border-top: 1px solid #eee;\n  margin-top: 4px;\n}\n````\n\n**Result:**  \n- The logo is left-aligned, the menu (including FacePileMenu) is right-aligned and vertically centered.\n- The FacePileMenu (user avatar) is a circle on the right, and its dropdown is styled and aligned.\n- All styles are in CSS classes for maintainability.\n\nLet me know if you want further adjustments!",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_41ea9609-f377-4244-84a5-42cad78a1332",
+      "result": {
+        "timings": {
+          "firstProgress": 1953,
+          "totalElapsed": 14495
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": "<header class=\"app-header\">\n  <div class=\"header-content\">\n    <!-- Logo aligned left -->\n    <div class=\"header-left\">\n      <img [src]=\"setLogo()\" id=\"logo\" class=\"header-logo\">\n    </div>\n    <!-- Menu aligned right -->\n    <ul class=\"header-menu\">\n      <li class=\"rightmargin7\" (mouseenter)=\"changeImageonHover('helpImage')\"\n        (mouseleave)=\"RemoveHoverImage('helpImage')\">\n        <img id=\"helpImage\" [src]=\"HelpImgSrc\" (click)=\"showHelpPdf()\">\n      </li>\n      <li class=\"nav-item facepile\"\n          [style.background-color]=\"appUser?.colorCode\"\n          [ngbPopover]=\"FacePileMenu\"\n          placement=\"bottom-right\"\n          popoverClass=\"LoggedUserPopover noborder\"\n          autoClose=\"true\"\n          container=\"body\">\n        <a id=\"text\" class=\"facepile-initials\">{{appUser?.nameInitials}}</a>\n      </li>\n      <ng-template #FacePileMenu>\n        <div class=\"facepile-dropdown\">\n          <div>\n            <div class=\"facepile-dropdown-item\" (click)=\"NavigateToProfile()\">\n              <a class=\"dropdown-item\">Edit Profile</a>\n            </div>\n            <div class=\"facepile-dropdown-item\" (click)=\"NavigateToSubscription()\">\n              <a class=\"dropdown-item\" matTooltipClass=\"ShowTextTooltip\">My Account</a>\n            </div>\n          </div>\n          <a class=\"dropdown-item noTopBorder\" (click)=\"logoutUser()\">Sign Out</a>\n        </div>\n      </ng-template>\n    </ul>\n  </div>\n  <div id=\"header\" *ngIf=\"!appUser\">\n    <nav id=\"RibbonNavBar\" class=\"navbar navbar-expand-lg \">\n      <div class=\"pgWidth\">\n        <div class=\"row navbar-nav mx-auto no-gutters\" id=\"ApplicationLogo\">\n          <div class=\"col-md-3\">\n            <img id=\"title\" style=\"cursor: pointer;\"\n              src=\"./assets/Images/logo/OPSLogo.svg?ApplicationVersion={{version}}\" (click)=\"GotoHomePage()\">\n          </div>\n          <div class=\"col-md-6\"></div>\n          <div class=\"col-md-3\"></div>\n        </div>\n      </div>\n    </nav>\n  </div>\n</header>\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/header/header.component.html",
+                "scheme": "file"
+              },
+              "language": "html",
+              "markdownBeforeBlock": "To style the FacePileMenu (user avatar and dropdown) on the right side of the header and center-align the header content, update your HTML and move all styles to CSS classes.\n\n**1. Update your HTML for semantic class usage:**\n"
+            },
+            {
+              "code": ".app-header {\n  width: 100%;\n  background: #1737BC;\n  color: #fff;\n  box-shadow: 0 2px 4px rgba(0,0,0,0.03);\n}\n\n.header-content {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: 56px;\n  padding: 0 24px;\n}\n\n.header-left {\n  display: flex;\n  align-items: center;\n}\n\n.header-logo {\n  height: 36px;\n}\n\n.header-menu {\n  display: flex;\n  align-items: center;\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n.header-menu li {\n  margin-left: 18px;\n  display: flex;\n  align-items: center;\n}\n\n.facepile {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-radius: 50%;\n  width: 40px;\n  height: 40px;\n  color: #fff;\n  font-weight: bold;\n  font-size: 18px;\n  cursor: pointer;\n  transition: box-shadow 0.2s;\n  box-shadow: 0 1px 4px rgba(0,0,0,0.08);\n  overflow: hidden;\n}\n\n.facepile-initials {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 100%;\n  height: 100%;\n  text-decoration: none;\n  color: inherit;\n}\n\n.facepile-dropdown {\n  min-width: 180px;\n  padding: 8px 0;\n  background: #fff;\n  color: #333;\n  border-radius: 8px;\n  box-shadow: 0 2px 8px rgba(0,0,0,0.12);\n}\n\n.facepile-dropdown-item {\n  padding: 0;\n}\n\n.facepile-dropdown .dropdown-item {\n  color: #333;\n  padding: 8px 16px;\n  cursor: pointer;\n  transition: background 0.2s;\n}\n\n.facepile-dropdown .dropdown-item:hover {\n  background: #f5f5f5;\n}\n\n.noTopBorder {\n  border-top: 1px solid #eee;\n  margin-top: 4px;\n}\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/header/header.component.css",
+                "scheme": "file"
+              },
+              "language": "css",
+              "markdownBeforeBlock": "\n**2. Add/replace the following in your `header.component.css`:**\n"
+            }
+          ],
+          "modelMessageId": "44b6c524-c8e3-4ba0-8831-1bf86d501b26",
+          "responseId": "fc752164-c122-4a5f-8f3e-ecedf8c74cff",
+          "sessionId": "2804d435-3e5d-4c3b-bf75-6976ca64c068",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "Copilotaiadmin1",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/171037490",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\header\\header.component.html",
+            "_sep": 1,
+            "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/header/header.component.html",
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/header/header.component.html",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1747889119634
+    },
+    {
+      "requestId": "request_0569eaf1-4def-4dcb-9b3a-6f9deea196b1",
+      "message": {
+        "parts": [
+          {
+            "range": {
+              "start": 0,
+              "endExclusive": 20
+            },
+            "editorRange": {
+              "startLineNumber": 1,
+              "startColumn": 1,
+              "endLineNumber": 1,
+              "endColumn": 21
+            },
+            "text": "also make responsive",
+            "kind": "text"
+          }
+        ],
+        "text": "also make responsive"
+      },
+      "variableData": {
+        "variables": [
+          {
+            "kind": "file",
+            "id": "vscode.implicit.viewport",
+            "name": "file:header.component.css",
+            "value": {
+              "uri": {
+                "$mid": 1,
+                "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\header\\header.component.css",
+                "_sep": 1,
+                "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/header/header.component.css",
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/header/header.component.css",
+                "scheme": "file"
+              },
+              "range": {
+                "startLineNumber": 71,
+                "startColumn": 1,
+                "endLineNumber": 112,
+                "endColumn": 26
+              }
+            },
+            "modelDescription": "User's current visible code"
+          }
+        ]
+      },
+      "response": [
+        {
+          "value": "Here’s a clean, responsive CSS for your header and FacePile menu.  \nThis will ensure the logo is left, the menu (including FacePile) is right, and everything is centered and adapts well to smaller screens.\n\n````css\n",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/",
+            "scheme": "file"
+          }
+        },
+        {
+          "kind": "codeblockUri",
+          "uri": {
+            "$mid": 1,
+            "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\header\\header.component.css",
+            "_sep": 1,
+            "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/header/header.component.css",
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/header/header.component.css",
+            "scheme": "file"
+          }
+        },
+        {
+          "value": ".app-header {\n  position: fixed;\n  top: 0;\n  width: 100%;\n  height: 60px;\n  background-color: #1737BC;\n  color: #fff;\n  box-shadow: 0 2px 4px rgba(0,0,0,0.03);\n  z-index: 100;\n}\n\n.header-content {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: 100%;\n  padding: 0 24px;\n}\n\n.header-left {\n  display: flex;\n  align-items: center;\n}\n\n.header-logo, #logo {\n  height: 36px;\n  width: auto;\n}\n\n.header-menu {\n  display: flex;\n  align-items: center;\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n.header-menu li {\n  margin-left: 18px;\n  display: flex;\n  align-items: center;\n}\n\n.rightmargin7 {\n  margin-right: 7px;\n}\n\n.facepile {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-radius: 50%;\n  width: 40px;\n  height: 40px;\n  color: #fff;\n  font-weight: bold;\n  font-size: 18px;\n  cursor: pointer;\n  transition: box-shadow 0.2s;\n  box-shadow: 0 1px 4px rgba(0,0,0,0.08);\n  overflow: hidden;\n}\n\n.facepile-initials {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 100%;\n  height: 100%;\n  text-decoration: none;\n  color: inherit;\n}\n\n.facepile-dropdown {\n  min-width: 180px;\n  padding: 8px 0;\n  background: #fff;\n  color: #333;\n  border-radius: 8px;\n  box-shadow: 0 2px 8px rgba(0,0,0,0.12);\n}\n\n.facepile-dropdown-item {\n  padding: 0;\n}\n\n.facepile-dropdown .dropdown-item {\n  color: #333;\n  padding: 8px 16px;\n  cursor: pointer;\n  transition: background 0.2s;\n}\n\n.facepile-dropdown .dropdown-item:hover {\n  background: #f5f5f5;\n}\n\n.noTopBorder {\n  border-top: 1px solid #eee;\n  margin-top: 4px;\n}\n\n/* Responsive styles */\n@media (max-width: 900px) {\n  .header-content {\n    padding: 0 10px;\n  }\n  .header-logo, #logo {\n    height: 28px;\n  }\n  .header-menu li {\n    margin-left: 10px;\n  }\n  .facepile {\n    width: 32px;\n    height: 32px;\n    font-size: 14px;\n  }\n}\n\n@media (max-width: 600px) {\n  .app-header {\n    height: 48px;\n  }\n  .header-content {\n    height: 48px;\n    padding: 0 4px;\n  }\n  .header-logo, #logo {\n    height: 22px;\n  }\n  .header-menu li {\n    margin-left: 6px;\n  }\n  .facepile {\n    width: 26px;\n    height: 26px;\n    font-size: 11px;\n  }\n  .facepile-dropdown {\n    min-width: 120px;\n    font-size: 13px;\n  }\n}\n````\n\n**This will:**\n- Keep the header fixed and always visible.\n- Align logo left, menu right, and center content vertically.\n- Shrink logo, menu spacing, and avatar on smaller screens for a clean mobile look.\n- Style the FacePile dropdown for usability and clarity.\n\nYou can further tweak breakpoints and sizes as needed for your app’s design!",
+          "supportThemeIcons": false,
+          "supportHtml": false,
+          "baseUri": {
+            "$mid": 1,
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/",
+            "scheme": "file"
+          }
+        }
+      ],
+      "responseId": "response_64817e4a-2704-4dfb-a041-788c061945bc",
+      "result": {
+        "timings": {
+          "firstProgress": 1869,
+          "totalElapsed": 11209
+        },
+        "metadata": {
+          "codeBlocks": [
+            {
+              "code": ".app-header {\n  position: fixed;\n  top: 0;\n  width: 100%;\n  height: 60px;\n  background-color: #1737BC;\n  color: #fff;\n  box-shadow: 0 2px 4px rgba(0,0,0,0.03);\n  z-index: 100;\n}\n\n.header-content {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  height: 100%;\n  padding: 0 24px;\n}\n\n.header-left {\n  display: flex;\n  align-items: center;\n}\n\n.header-logo, #logo {\n  height: 36px;\n  width: auto;\n}\n\n.header-menu {\n  display: flex;\n  align-items: center;\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n\n.header-menu li {\n  margin-left: 18px;\n  display: flex;\n  align-items: center;\n}\n\n.rightmargin7 {\n  margin-right: 7px;\n}\n\n.facepile {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  border-radius: 50%;\n  width: 40px;\n  height: 40px;\n  color: #fff;\n  font-weight: bold;\n  font-size: 18px;\n  cursor: pointer;\n  transition: box-shadow 0.2s;\n  box-shadow: 0 1px 4px rgba(0,0,0,0.08);\n  overflow: hidden;\n}\n\n.facepile-initials {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  width: 100%;\n  height: 100%;\n  text-decoration: none;\n  color: inherit;\n}\n\n.facepile-dropdown {\n  min-width: 180px;\n  padding: 8px 0;\n  background: #fff;\n  color: #333;\n  border-radius: 8px;\n  box-shadow: 0 2px 8px rgba(0,0,0,0.12);\n}\n\n.facepile-dropdown-item {\n  padding: 0;\n}\n\n.facepile-dropdown .dropdown-item {\n  color: #333;\n  padding: 8px 16px;\n  cursor: pointer;\n  transition: background 0.2s;\n}\n\n.facepile-dropdown .dropdown-item:hover {\n  background: #f5f5f5;\n}\n\n.noTopBorder {\n  border-top: 1px solid #eee;\n  margin-top: 4px;\n}\n\n/* Responsive styles */\n@media (max-width: 900px) {\n  .header-content {\n    padding: 0 10px;\n  }\n  .header-logo, #logo {\n    height: 28px;\n  }\n  .header-menu li {\n    margin-left: 10px;\n  }\n  .facepile {\n    width: 32px;\n    height: 32px;\n    font-size: 14px;\n  }\n}\n\n@media (max-width: 600px) {\n  .app-header {\n    height: 48px;\n  }\n  .header-content {\n    height: 48px;\n    padding: 0 4px;\n  }\n  .header-logo, #logo {\n    height: 22px;\n  }\n  .header-menu li {\n    margin-left: 6px;\n  }\n  .facepile {\n    width: 26px;\n    height: 26px;\n    font-size: 11px;\n  }\n  .facepile-dropdown {\n    min-width: 120px;\n    font-size: 13px;\n  }\n}\n",
+              "resource": {
+                "$mid": 1,
+                "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/header/header.component.css",
+                "scheme": "file"
+              },
+              "language": "css",
+              "markdownBeforeBlock": "Here’s a clean, responsive CSS for your header and FacePile menu.  \nThis will ensure the logo is left, the menu (including FacePile) is right, and everything is centered and adapts well to smaller screens.\n\n"
+            }
+          ],
+          "modelMessageId": "ebfe7b04-b990-4a92-b3c1-80e2659f987a",
+          "responseId": "3de78d32-8164-48a2-9e7a-6283252ab546",
+          "sessionId": "2804d435-3e5d-4c3b-bf75-6976ca64c068",
+          "agentId": "github.copilot.default"
+        }
+      },
+      "followups": [],
+      "isCanceled": false,
+      "agent": {
+        "extensionId": {
+          "value": "GitHub.copilot-chat",
+          "_lower": "github.copilot-chat"
+        },
+        "publisherDisplayName": "GitHub",
+        "extensionPublisherId": "GitHub",
+        "extensionDisplayName": "GitHub Copilot Chat",
+        "id": "github.copilot.default",
+        "description": "Ask Copilot",
+        "metadata": {
+          "themeIcon": {
+            "id": "copilot"
+          },
+          "hasFollowups": true,
+          "helpTextPrefix": "You can ask me general programming questions, or chat with the following participants which have specialized expertise and can perform actions:",
+          "helpTextVariablesPrefix": "You can also help me understand your question by using the following variables to give me extra context:",
+          "helpTextPostfix": {
+            "value": "To have a great conversation, ask me questions as if I was a real programmer:\n\n* **Show me the code** you want to talk about by having the files open and selecting the most important lines.\n* **Make refinements** by asking me follow-up questions, adding clarifications, providing errors, etc.\n* **Review my suggested code** and tell me about issues or improvements, so I can iterate on it.\n\nYou can also ask me questions about your editor selection by [starting an inline chat session](command:inlineChat.start).\n\nLearn more about [GitHub Copilot](https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted) in [Visual Studio Code](https://code.visualstudio.com/docs/copilot/overview). Or explore the [Copilot walkthrough](command:github.copilot.open.walkthrough).",
+            "isTrusted": {
+              "enabledCommands": [
+                "inlineChat.start",
+                "github.copilot.open.walkthrough"
+              ]
+            },
+            "supportThemeIcons": false,
+            "supportHtml": false,
+            "uris": {
+              "command:inlineChat.start": {
+                "$mid": 1,
+                "path": "inlineChat.start",
+                "scheme": "command"
+              },
+              "https://docs.github.com/copilot/using-github-copilot/getting-started-with-github-copilot?tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted": {
+                "$mid": 1,
+                "path": "/copilot/using-github-copilot/getting-started-with-github-copilot",
+                "scheme": "https",
+                "authority": "docs.github.com",
+                "query": "tool=vscode&utm_source=editor&utm_medium=chat-panel&utm_campaign=2024q3-em-MSFT-getstarted"
+              },
+              "https://code.visualstudio.com/docs/copilot/overview": {
+                "$mid": 1,
+                "path": "/docs/copilot/overview",
+                "scheme": "https",
+                "authority": "code.visualstudio.com"
+              },
+              "command:github.copilot.open.walkthrough": {
+                "$mid": 1,
+                "path": "github.copilot.open.walkthrough",
+                "scheme": "command"
+              }
+            }
+          },
+          "supportIssueReporting": false,
+          "requester": {
+            "name": "Copilotaiadmin1",
+            "icon": {
+              "$mid": 1,
+              "path": "/u/171037490",
+              "scheme": "https",
+              "authority": "avatars.githubusercontent.com",
+              "query": "v=4"
+            }
+          }
+        },
+        "name": "GitHubCopilot",
+        "fullName": "GitHub Copilot",
+        "isDefault": true,
+        "locations": [
+          "panel"
+        ],
+        "modes": [
+          "ask"
+        ],
+        "slashCommands": [],
+        "disambiguation": [
+          {
+            "category": "generate_code_sample",
+            "description": "The user wants to generate code snippets without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Write an example of computing a SHA256 hash."
+            ]
+          },
+          {
+            "category": "add_feature_to_file",
+            "description": "The user wants to change code in a file that is provided in their request, without referencing the contents of the current workspace. This category does not include generating entire projects.",
+            "examples": [
+              "Add a refresh button to the table widget."
+            ]
+          },
+          {
+            "category": "question_about_specific_files",
+            "description": "The user has a question about a specific file or code snippet that they have provided as part of their query, and the question does not require additional workspace context to answer.",
+            "examples": [
+              "What does this file do?"
+            ]
+          }
+        ]
+      },
+      "contentReferences": [
+        {
+          "kind": "reference",
+          "reference": {
+            "$mid": 1,
+            "fsPath": "d:\\Aarcee-Dev\\Development\\SVN\\OurProjectSpace\\branches\\ClientApp\\Release - OPS Admin App\\src\\app\\components\\common\\header\\header.component.css",
+            "_sep": 1,
+            "external": "file:///d%3A/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release%20-%20OPS%20Admin%20App/src/app/components/common/header/header.component.css",
+            "path": "/d:/Aarcee-Dev/Development/SVN/OurProjectSpace/branches/ClientApp/Release - OPS Admin App/src/app/components/common/header/header.component.css",
+            "scheme": "file"
+          }
+        }
+      ],
+      "codeCitations": [],
+      "timestamp": 1747889208178
+    }
+  ]
+}
